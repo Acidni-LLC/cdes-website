@@ -32,11 +32,11 @@ import Layout from '../layouts/Layout.astro';
         Install the SDK
       </h2>
       <div class="bg-gray-900 rounded-lg p-6">
-        <pre class="text-green-400 text-sm overflow-x-auto"><code># Using pip
+        <pre class="text-green-400 text-sm overflow-x-auto"># Using pip
 pip install cdes
 
-# Using poetry  
-poetry add cdes</code></pre>
+# Using poetry
+poetry add cdes</pre>
       </div>
     </section>
 
@@ -46,15 +46,12 @@ poetry add cdes</code></pre>
         Validate Your Data
       </h2>
       <div class="bg-gray-900 rounded-lg p-6">
-        <pre class="text-green-400 text-sm overflow-x-auto"><code>from cdes import validate_strain
+        <pre class="text-green-400 text-sm overflow-x-auto">from cdes import validate_strain
 
-strain_data = {"{'"}
-    "name": "Gelato",
-    "type": "hybrid"
-{"}"}
+strain_data = dict(name="Gelato", type="hybrid")
 
 result = validate_strain(strain_data)
-print(result.valid)  # True</code></pre>
+print(result.valid)  # True</pre>
       </div>
     </section>
 
@@ -64,12 +61,12 @@ print(result.valid)  # True</code></pre>
         Access Reference Data
       </h2>
       <div class="bg-gray-900 rounded-lg p-6">
-        <pre class="text-green-400 text-sm overflow-x-auto"><code>from cdes import get_terpene_library
+        <pre class="text-green-400 text-sm overflow-x-auto">from cdes import get_terpene_library
 
 terpenes = get_terpene_library()
-myrcene = terpenes["terpene:myrcene"]
-print(myrcene["name"])       # Myrcene
-print(myrcene["casNumber"])  # 123-35-3</code></pre>
+myrcene = terpenes.get("terpene:myrcene")
+print(myrcene.get("name"))       # Myrcene
+print(myrcene.get("casNumber"))  # 123-35-3</pre>
       </div>
     </section>
 
