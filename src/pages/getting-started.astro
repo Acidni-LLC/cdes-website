@@ -1,17 +1,12 @@
-﻿---
+---
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Getting Started" description="Quick start guide for implementing CDES">
   <div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
     <h1 class="text-4xl font-bold text-gray-900 mb-8">Getting Started with CDES</h1>
-    
-    <p class="text-xl text-gray-600 mb-12">
-      Integrate CDES into your cannabis software in minutes. Follow these steps to 
-      start exchanging standardized data.
-    </p>
+    <p class="text-xl text-gray-600 mb-12">Integrate CDES into your cannabis software in minutes.</p>
 
-    <!-- Step 1: Choose Your Path -->
     <section class="mb-12">
       <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
         <span class="w-8 h-8 bg-cdes-green-600 text-white rounded-full flex items-center justify-center text-sm mr-3">1</span>
@@ -19,19 +14,18 @@ import Layout from '../layouts/Layout.astro';
       </h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="border rounded-lg p-6 hover:border-cdes-green-500 transition">
-          <h3 class="font-semibold text-lg mb-2"> Python SDK</h3>
+          <h3 class="font-semibold text-lg mb-2">Python SDK</h3>
           <p class="text-gray-600 mb-4">Best for data pipelines, APIs, and backend services.</p>
           <code class="bg-gray-100 px-3 py-1 rounded text-sm">pip install cdes</code>
         </div>
         <div class="border rounded-lg p-6 hover:border-cdes-green-500 transition">
-          <h3 class="font-semibold text-lg mb-2"> JSON Schema</h3>
+          <h3 class="font-semibold text-lg mb-2">JSON Schema</h3>
           <p class="text-gray-600 mb-4">Use with any language. Validate data directly.</p>
-          <a href="https://github.com/Acidni-LLC/cdes-spec" class="text-cdes-green-600 hover:underline">View Schemas </a>
+          <a href="https://github.com/Acidni-LLC/cdes-spec" class="text-cdes-green-600 hover:underline">View Schemas</a>
         </div>
       </div>
     </section>
 
-    <!-- Step 2: Install -->
     <section class="mb-12">
       <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
         <span class="w-8 h-8 bg-cdes-green-600 text-white rounded-full flex items-center justify-center text-sm mr-3">2</span>
@@ -42,80 +36,49 @@ import Layout from '../layouts/Layout.astro';
 pip install cdes
 
 # Using poetry  
-poetry add cdes
-
-# Using conda
-conda install -c conda-forge cdes</code></pre>
+poetry add cdes</code></pre>
       </div>
     </section>
 
-    <!-- Step 3: Validate Data -->
     <section class="mb-12">
       <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
         <span class="w-8 h-8 bg-cdes-green-600 text-white rounded-full flex items-center justify-center text-sm mr-3">3</span>
         Validate Your Data
       </h2>
       <div class="bg-gray-900 rounded-lg p-6">
-        <pre class="text-sm overflow-x-auto"><code><span class="text-purple-400">from</span> <span class="text-white">cdes</span> <span class="text-purple-400">import</span> <span class="text-white">validate_strain, validate_coa</span>
+        <pre class="text-green-400 text-sm overflow-x-auto"><code>from cdes import validate_strain
 
-<span class="text-gray-500"># Validate a strain</span>
-<span class="text-white">strain_data</span> <span class="text-white">=</span> <span class="text-white">{</span>
-    <span class="text-green-400">"name"</span><span class="text-white">:</span> <span class="text-green-400">"Gelato"</span><span class="text-white">,</span>
-    <span class="text-green-400">"type"</span><span class="text-white">:</span> <span class="text-green-400">"hybrid"</span><span class="text-white">,</span>
-    <span class="text-green-400">"genetics"</span><span class="text-white">:</span> <span class="text-green-400">"Sunset Sherbet x Thin Mint GSC"</span>
-<span class="text-white">}</span>
+strain_data = {"{'"}
+    "name": "Gelato",
+    "type": "hybrid"
+{"}"}
 
-<span class="text-white">result</span> <span class="text-white">=</span> <span class="text-white">validate_strain(strain_data)</span>
-<span class="text-purple-400">if</span> <span class="text-white">result.valid:</span>
-    <span class="text-purple-400">print</span><span class="text-white">(</span><span class="text-green-400">" Strain is CDES-compliant!"</span><span class="text-white">)</span>
-<span class="text-purple-400">else</span><span class="text-white">:</span>
-    <span class="text-purple-400">for</span> <span class="text-white">error</span> <span class="text-purple-400">in</span> <span class="text-white">result.errors:</span>
-        <span class="text-purple-400">print</span><span class="text-white">(f</span><span class="text-green-400">" {error.message}"</span><span class="text-white">)</span></code></pre>
+result = validate_strain(strain_data)
+print(result.valid)  # True</code></pre>
       </div>
     </section>
 
-    <!-- Step 4: Use Reference Data -->
     <section class="mb-12">
       <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
         <span class="w-8 h-8 bg-cdes-green-600 text-white rounded-full flex items-center justify-center text-sm mr-3">4</span>
         Access Reference Data
       </h2>
       <div class="bg-gray-900 rounded-lg p-6">
-        <pre class="text-sm overflow-x-auto"><code><span class="text-purple-400">from</span> <span class="text-white">cdes</span> <span class="text-purple-400">import</span> <span class="text-white">get_terpene_library, normalize_terpene_id</span>
+        <pre class="text-green-400 text-sm overflow-x-auto"><code>from cdes import get_terpene_library
 
-<span class="text-gray-500"># Get official terpene data</span>
-<span class="text-white">terpenes</span> <span class="text-white">=</span> <span class="text-white">get_terpene_library()</span>
-<span class="text-white">myrcene</span> <span class="text-white">=</span> <span class="text-white">terpenes[</span><span class="text-green-400">"terpene:myrcene"</span><span class="text-white">]</span>
-
-<span class="text-purple-400">print</span><span class="text-white">(f</span><span class="text-green-400">"Name: {myrcene['name']}"</span><span class="text-white">)</span>        <span class="text-gray-500"># Myrcene</span>
-<span class="text-purple-400">print</span><span class="text-white">(f</span><span class="text-green-400">"CAS: {myrcene['casNumber']}"</span><span class="text-white">)</span>    <span class="text-gray-500"># 123-35-3</span>
-<span class="text-purple-400">print</span><span class="text-white">(f</span><span class="text-green-400">"Effects: {myrcene['effects']}"</span><span class="text-white">)</span>  <span class="text-gray-500"># ['relaxing', 'sedating', ...]</span>
-
-<span class="text-gray-500"># Normalize vendor-specific names to CDES IDs</span>
-<span class="text-white">cdes_id</span> <span class="text-white">=</span> <span class="text-white">normalize_terpene_id(</span><span class="text-green-400">"β-Caryophyllene"</span><span class="text-white">)</span>
-<span class="text-purple-400">print</span><span class="text-white">(cdes_id)</span>  <span class="text-gray-500"># terpene:beta-caryophyllene</span></code></pre>
+terpenes = get_terpene_library()
+myrcene = terpenes["terpene:myrcene"]
+print(myrcene["name"])       # Myrcene
+print(myrcene["casNumber"])  # 123-35-3</code></pre>
       </div>
     </section>
 
-    <!-- Next Steps -->
     <section class="bg-cdes-green-50 rounded-lg p-8">
       <h2 class="text-2xl font-bold text-gray-900 mb-4">Next Steps</h2>
       <ul class="space-y-3">
-        <li class="flex items-start">
-          <span class="text-cdes-green-600 mr-2"></span>
-          <a href="/terpenes" class="text-cdes-green-600 hover:underline">Browse the Terpene Library</a>
-          <span class="text-gray-600 ml-2">- See all 24+ official terpenes</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-cdes-green-600 mr-2"></span>
-          <a href="/schemas" class="text-cdes-green-600 hover:underline">Explore the Schemas</a>
-          <span class="text-gray-600 ml-2">- Full JSON Schema documentation</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-cdes-green-600 mr-2"></span>
-          <a href="https://github.com/Acidni-LLC/cdes-sdk-python" class="text-cdes-green-600 hover:underline">Python SDK Reference</a>
-          <span class="text-gray-600 ml-2">- Complete API documentation</span>
-        </li>
+        <li><a href="/terpenes" class="text-cdes-green-600 hover:underline">Browse the Terpene Library</a> - See all 24+ official terpenes</li>
+        <li><a href="/schemas" class="text-cdes-green-600 hover:underline">Explore the Schemas</a> - Full JSON Schema documentation</li>
+        <li><a href="https://github.com/Acidni-LLC/cdes-sdk-python" class="text-cdes-green-600 hover:underline">Python SDK Reference</a> - Complete API documentation</li>
       </ul>
     </section>
   </div>
