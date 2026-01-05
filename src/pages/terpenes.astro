@@ -1,0 +1,116 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+import terpeneData from '../data/terpene-library.json';
+
+const terpenes = terpeneData.terpenes;
+---
+
+<Layout title="Terpene Library" description="Official CDES terpene reference with CAS numbers and effects">
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">CDES Terpene Library</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Official reference list of cannabis terpenes with standardized identifiers, 
+        CAS numbers, and documented effects.
+      </p>
+      <p class="mt-4 text-sm text-gray-500">
+        Version {terpeneData.version}  Last updated: {terpeneData.lastUpdated}  
+        <a href="https://github.com/Acidni-LLC/cdes-reference-data" class="text-cdes-green-600 hover:underline">CC0 Public Domain</a>
+      </p>
+    </div>
+
+    <!-- Terpene Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {terpenes.map((terpene: any) => (
+        <div class="bg-white border rounded-lg overflow-hidden hover:shadow-lg transition">
+          <div class="bg-cdes-green-600 text-white px-4 py-3">
+            <h2 class="text-lg font-semibold">{terpene.name}</h2>
+            <code class="text-xs text-cdes-green-200">{terpene.id}</code>
+          </div>
+          <div class="p-4">
+            <div class="grid grid-cols-2 gap-2 text-sm mb-4">
+              <div>
+                <span class="text-gray-500">CAS:</span>
+                <span class="font-mono ml-1">{terpene.casNumber}</span>
+              </div>
+              <div>
+                <span class="text-gray-500">PubChem:</span>
+                <a 
+                  href={`https://pubchem.ncbi.nlm.nih.gov/compound/${terpene.pubchemId}`}
+                  target="_blank"
+                  class="text-cdes-green-600 hover:underline ml-1"
+                >
+                  {terpene.pubchemId}
+                </a>
+              </div>
+              <div>
+                <span class="text-gray-500">Formula:</span>
+                <span class="font-mono ml-1">{terpene.molecularFormula}</span>
+              </div>
+              <div>
+                <span class="text-gray-500">Category:</span>
+                <span class="ml-1 capitalize">{terpene.category}</span>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <span class="text-gray-500 text-sm">Aroma:</span>
+              <div class="flex flex-wrap gap-1 mt-1">
+                {terpene.aroma?.map((a: string) => (
+                  <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded">{a}</span>
+                ))}
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-gray-500 text-sm">Effects:</span>
+              <div class="flex flex-wrap gap-1 mt-1">
+                {terpene.effects?.slice(0, 3).map((e: any) => (
+                  <span class={`text-xs px-2 py-0.5 rounded ${
+                    e.strength === 'strong' ? 'bg-cdes-green-100 text-cdes-green-800' :
+                    e.strength === 'moderate' ? 'bg-blue-100 text-blue-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {e.effect}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {terpene.boilingPoint && (
+              <div class="text-sm text-gray-500">
+                Boiling Point: {terpene.boilingPoint.celsius}C / {terpene.boilingPoint.fahrenheit}F
+              </div>
+            )}
+
+            {terpene.notes && (
+              <p class="text-sm text-gray-600 mt-3 italic">{terpene.notes}</p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Download Section -->
+    <div class="mt-16 text-center bg-gray-50 rounded-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Download the Full Dataset</h2>
+      <p class="text-gray-600 mb-6">
+        Access the complete terpene library in JSON format for your applications.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a 
+          href="https://raw.githubusercontent.com/Acidni-LLC/cdes-reference-data/main/terpenes/terpene-library.json"
+          class="px-6 py-3 bg-cdes-green-600 text-white rounded-lg hover:bg-cdes-green-700 transition"
+        >
+          Download JSON
+        </a>
+        <a 
+          href="https://github.com/Acidni-LLC/cdes-reference-data"
+          class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition"
+        >
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

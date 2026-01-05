@@ -1,0 +1,108 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About CDES" description="Cannabis Data Exchange Standard - open standard for interoperable cannabis data">
+  <div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">About CDES</h1>
+    
+    <div class="prose prose-lg max-w-none">
+      <p class="text-xl text-gray-600 mb-8">
+        The Cannabis Data Exchange Standard (CDES) is an open, community-driven specification 
+        for exchanging cannabis-related data between systems, applications, and organizations.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Our Mission</h2>
+      <p class="text-gray-600 mb-6">
+        CDES aims to create a unified language for cannabis data that enables:
+      </p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-2 mb-8">
+        <li><strong>Interoperability</strong> - Systems can exchange data without custom integrations</li>
+        <li><strong>Data Quality</strong> - Standardized formats reduce errors and inconsistencies</li>
+        <li><strong>Industry Growth</strong> - Lower barriers to building cannabis technology</li>
+        <li><strong>Research Advancement</strong> - Consistent data enables better scientific analysis</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Why CDES?</h2>
+      <p class="text-gray-600 mb-6">
+        The cannabis industry lacks standardized data formats. Every dispensary, lab, and software 
+        vendor uses different schemas, field names, and identifiers. This fragmentation causes:
+      </p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-2 mb-8">
+        <li>Integration headaches when connecting systems</li>
+        <li>Data quality issues from inconsistent formats</li>
+        <li>Duplicated effort across the industry</li>
+        <li>Barriers to research and analytics</li>
+      </ul>
+      <p class="text-gray-600 mb-8">
+        CDES solves these problems by providing a shared vocabulary and schema that anyone can adopt.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Specification Components</h2>
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold text-gray-900 mb-2">JSON Schemas</h3>
+          <p class="text-gray-600 text-sm">
+            Formal schema definitions for strains, COAs, terpene profiles, and cannabinoid profiles.
+          </p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold text-gray-900 mb-2">Reference Data</h3>
+          <p class="text-gray-600 text-sm">
+            Canonical lists of terpenes, cannabinoids, and other reference entities with standard IDs.
+          </p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold text-gray-900 mb-2">Python SDK</h3>
+          <p class="text-gray-600 text-sm">
+            Validation library and utilities for working with CDES data in Python applications.
+          </p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold text-gray-900 mb-2">Documentation</h3>
+          <p class="text-gray-600 text-sm">
+            Comprehensive guides, examples, and best practices for implementation.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Governance</h2>
+      <p class="text-gray-600 mb-6">
+        CDES is developed openly on GitHub. We welcome contributions from:
+      </p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-2 mb-8">
+        <li>Cannabis technology companies</li>
+        <li>Testing laboratories</li>
+        <li>Dispensaries and cultivators</li>
+        <li>Researchers and data scientists</li>
+        <li>Regulatory bodies</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Maintained By</h2>
+      <p class="text-gray-600 mb-6">
+        CDES is maintained by <a href="https://acidni.com" class="text-cdes-green-600 hover:underline">Acidni LLC</a>, 
+        a software company specializing in cannabis data analytics and AI solutions.
+      </p>
+      <p class="text-gray-600 mb-8">
+        Our goal is to establish CDES as the industry standard, governed by a consortium of 
+        stakeholders representing all segments of the cannabis industry.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Get Involved</h2>
+      <div class="flex flex-wrap gap-4">
+        <a href="https://github.com/Acidni-LLC/cdes-spec" 
+           class="px-6 py-3 bg-cdes-green-600 text-white rounded-lg hover:bg-cdes-green-700 transition">
+          View Specification
+        </a>
+        <a href="https://github.com/Acidni-LLC/cdes-spec/issues" 
+           class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition">
+          Report Issues
+        </a>
+        <a href="https://github.com/Acidni-LLC/cdes-spec/discussions" 
+           class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition">
+          Join Discussion
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
