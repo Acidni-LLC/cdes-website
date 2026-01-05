@@ -25,16 +25,17 @@ const { title, description = 'CDES - Cannabis Data Exchange Standard' } = Astro.
             <div class="hidden md:block ml-10">
               <div class="flex items-baseline space-x-4">
                 <a href="/getting-started" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Getting Started</a>
-                <a href="/terpenes" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Terpenes</a>
                 <a href="/schemas" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Schemas</a>
-                <a href="/api" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">API</a>
+                <a href="/terpenes" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Terpenes</a>
+                <a href="/roadmap" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Roadmap</a>
+                <a href="/community" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Community</a>
                 <a href="/about" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">About</a>
               </div>
             </div>
           </div>
           <div>
-            <a 
-              href="https://github.com/Acidni-LLC/cdes-spec" 
+            <a
+              href="https://github.com/Acidni-LLC/cdes-spec"
               target="_blank"
               class="px-4 py-2 bg-white text-cdes-green-700 rounded-md font-medium hover:bg-cdes-green-50"
             >
@@ -44,19 +45,22 @@ const { title, description = 'CDES - Cannabis Data Exchange Standard' } = Astro.
         </div>
       </div>
     </nav>
-    
+
     <main>
       <slot />
     </main>
-    
+
     <footer class="bg-gray-100 mt-16">
       <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div class="text-center text-gray-600">
           <p>CDES - Cannabis Data Exchange Standard</p>
           <p class="mt-2 text-sm">
-            Schemas: <a href="https://github.com/Acidni-LLC/cdes-spec" class="text-cdes-green-600 hover:underline">CC BY 4.0</a> |
-            Reference Data: <a href="https://github.com/Acidni-LLC/cdes-reference-data" class="text-cdes-green-600 hover:underline">CC0 Public Domain</a> |
-            SDKs: <a href="https://github.com/Acidni-LLC/cdes-sdk-python" class="text-cdes-green-600 hover:underline">Apache 2.0</a>
+            <a href="/roadmap" class="text-cdes-green-600 hover:underline">Roadmap</a> |
+            <a href="/community" class="text-cdes-green-600 hover:underline">Community</a> |
+            <a href="https://github.com/Acidni-LLC/cdes-spec" class="text-cdes-green-600 hover:underline">GitHub</a>
+          </p>
+          <p class="mt-2 text-xs text-gray-500">
+            Schemas: CC BY 4.0 | Reference Data: CC0 | SDKs: Apache 2.0
           </p>
         </div>
       </div>

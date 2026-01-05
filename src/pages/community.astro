@@ -1,0 +1,247 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Community" description="CDES Working Group meetings, events, and how to get involved">
+  <div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">CDES Community</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Join the effort to standardize cannabis data. Participate in working groups,
+        attend community calls, and help shape the future of the specification.
+      </p>
+    </div>
+
+    <!-- Meeting Calendar -->
+    <div class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+        <svg class="w-6 h-6 mr-2 text-cdes-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        Meeting Calendar
+      </h2>
+
+      <div class="space-y-6">
+        <!-- Weekly -->
+        <div class="bg-white border rounded-lg overflow-hidden">
+          <div class="bg-cdes-green-600 text-white px-4 py-2">
+            <span class="font-semibold">Weekly</span>
+          </div>
+          <div class="p-4">
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="font-semibold text-lg">Technical Working Group</h3>
+                <p class="text-gray-600 text-sm mb-2">Schema design, SDK development, and technical decisions</p>
+                <div class="flex items-center text-sm text-gray-500">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  Thursdays @ 2:00 PM ET
+                </div>
+                <div class="flex items-center text-sm text-gray-500 mt-1">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                  </svg>
+                  Virtual (Microsoft Teams)
+                </div>
+              </div>
+              <span class="bg-cdes-green-100 text-cdes-green-800 text-xs px-2 py-1 rounded">Active</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monthly -->
+        <div class="bg-white border rounded-lg overflow-hidden">
+          <div class="bg-blue-600 text-white px-4 py-2">
+            <span class="font-semibold">Monthly</span>
+          </div>
+          <div class="divide-y">
+            <div class="p-4">
+              <div class="flex items-start justify-between">
+                <div>
+                  <h3 class="font-semibold text-lg">Community Call</h3>
+                  <p class="text-gray-600 text-sm mb-2">Open forum for updates, demos, and Q&amp;A with the community</p>
+                  <div class="flex items-center text-sm text-gray-500">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    First Tuesday @ 11:00 AM ET
+                  </div>
+                  <div class="flex items-center text-sm text-gray-500 mt-1">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                    </svg>
+                    Virtual (Open to all)
+                  </div>
+                </div>
+                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Open</span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-start justify-between">
+                <div>
+                  <h3 class="font-semibold text-lg">Reference Data Review</h3>
+                  <p class="text-gray-600 text-sm mb-2">Review proposed additions to terpene and cannabinoid libraries</p>
+                  <div class="flex items-center text-sm text-gray-500">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Third Wednesday @ 3:00 PM ET
+                  </div>
+                </div>
+                <span class="bg-cdes-green-100 text-cdes-green-800 text-xs px-2 py-1 rounded">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quarterly -->
+        <div class="bg-white border rounded-lg overflow-hidden">
+          <div class="bg-purple-600 text-white px-4 py-2">
+            <span class="font-semibold">Quarterly</span>
+          </div>
+          <div class="divide-y">
+            <div class="p-4">
+              <div class="flex items-start justify-between">
+                <div>
+                  <h3 class="font-semibold text-lg">Steering Committee</h3>
+                  <p class="text-gray-600 text-sm mb-2">Strategic direction, roadmap planning, and governance decisions</p>
+                  <div class="flex items-center text-sm text-gray-500">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    First week of quarter
+                  </div>
+                </div>
+                <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">By invitation</span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-start justify-between">
+                <div>
+                  <h3 class="font-semibold text-lg">Specification Release Review</h3>
+                  <p class="text-gray-600 text-sm mb-2">Vote on proposed schema changes and version releases</p>
+                  <div class="flex items-center text-sm text-gray-500">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    End of quarter (Mar, Jun, Sep, Dec)
+                  </div>
+                </div>
+                <span class="bg-cdes-green-100 text-cdes-green-800 text-xs px-2 py-1 rounded">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upcoming Dates -->
+    <div class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Upcoming Meetings</h2>
+      <div class="bg-gray-50 rounded-lg p-6">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between py-2 border-b">
+            <div>
+              <span class="font-medium">Technical Working Group</span>
+              <span class="text-gray-500 text-sm ml-2">Weekly sync</span>
+            </div>
+            <span class="text-sm text-gray-600">Thu, Jan 9, 2026 @ 2:00 PM ET</span>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b">
+            <div>
+              <span class="font-medium">Community Call</span>
+              <span class="text-gray-500 text-sm ml-2">Monthly open forum</span>
+            </div>
+            <span class="text-sm text-gray-600">Tue, Feb 4, 2026 @ 11:00 AM ET</span>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b">
+            <div>
+              <span class="font-medium">Reference Data Review</span>
+              <span class="text-gray-500 text-sm ml-2">Cannabinoid library additions</span>
+            </div>
+            <span class="text-sm text-gray-600">Wed, Jan 15, 2026 @ 3:00 PM ET</span>
+          </div>
+          <div class="flex items-center justify-between py-2">
+            <div>
+              <span class="font-medium">Q1 Specification Release</span>
+              <span class="text-gray-500 text-sm ml-2">v1.1 vote</span>
+            </div>
+            <span class="text-sm text-gray-600">Tue, Mar 24, 2026 @ 2:00 PM ET</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Working Groups -->
+    <div class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Working Groups</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="border rounded-lg p-6">
+          <h3 class="font-semibold text-lg mb-2">Schema Working Group</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Develops and maintains JSON Schema definitions for CDES data types.
+          </p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>&#8226; Strain, COA, Profile schemas</li>
+            <li>&#8226; Versioning and migration</li>
+            <li>&#8226; Validation rules</li>
+          </ul>
+        </div>
+        <div class="border rounded-lg p-6">
+          <h3 class="font-semibold text-lg mb-2">Reference Data Working Group</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Curates authoritative lists of terpenes, cannabinoids, and identifiers.
+          </p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>&#8226; Terpene library maintenance</li>
+            <li>&#8226; Cannabinoid registry</li>
+            <li>&#8226; Scientific accuracy review</li>
+          </ul>
+        </div>
+        <div class="border rounded-lg p-6">
+          <h3 class="font-semibold text-lg mb-2">SDK Working Group</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Builds and maintains official CDES software development kits.
+          </p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>&#8226; Python SDK</li>
+            <li>&#8226; TypeScript SDK (planned)</li>
+            <li>&#8226; API design</li>
+          </ul>
+        </div>
+        <div class="border rounded-lg p-6">
+          <h3 class="font-semibold text-lg mb-2">Compliance Working Group</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Aligns CDES with regulatory requirements across jurisdictions.
+          </p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>&#8226; State compliance mapping</li>
+            <li>&#8226; Traceability standards</li>
+            <li>&#8226; Coming in Phase 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Get Involved CTA -->
+    <div class="bg-cdes-green-600 text-white rounded-lg p-8 text-center">
+      <h2 class="text-2xl font-bold mb-4">Join the Community</h2>
+      <p class="mb-6 text-cdes-green-100">
+        Whether you represent a dispensary, lab, software vendor, or are just passionate
+        about cannabis data standards - we want to hear from you.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://github.com/Acidni-LLC/cdes-spec/discussions"
+           class="px-6 py-3 bg-white text-cdes-green-700 rounded-lg font-medium hover:bg-cdes-green-50 transition">
+          Join GitHub Discussions
+        </a>
+        <a href="mailto:cdes@acidni.com"
+           class="px-6 py-3 border-2 border-white text-white rounded-lg font-medium hover:bg-white hover:text-cdes-green-700 transition">
+          Contact Us
+        </a>
+      </div>
+    </div>
+
+  </div>
+</Layout>
