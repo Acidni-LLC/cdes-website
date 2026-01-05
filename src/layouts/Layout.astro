@@ -1,0 +1,65 @@
+﻿---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'CDES - Cannabis Data Exchange Standard' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | CDES</title>
+  </head>
+  <body class="min-h-screen bg-white">
+    <nav class="bg-cdes-green-700 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="text-xl font-bold">CDES</a>
+            <div class="hidden md:block ml-10">
+              <div class="flex items-baseline space-x-4">
+                <a href="/getting-started" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Getting Started</a>
+                <a href="/terpenes" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Terpenes</a>
+                <a href="/schemas" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Schemas</a>
+                <a href="/api" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">API</a>
+                <a href="/about" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">About</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a 
+              href="https://github.com/Acidni-LLC/cdes-spec" 
+              target="_blank"
+              class="px-4 py-2 bg-white text-cdes-green-700 rounded-md font-medium hover:bg-cdes-green-50"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <main>
+      <slot />
+    </main>
+    
+    <footer class="bg-gray-100 mt-16">
+      <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div class="text-center text-gray-600">
+          <p>CDES - Cannabis Data Exchange Standard</p>
+          <p class="mt-2 text-sm">
+            Schemas: <a href="https://github.com/Acidni-LLC/cdes-spec" class="text-cdes-green-600 hover:underline">CC BY 4.0</a> |
+            Reference Data: <a href="https://github.com/Acidni-LLC/cdes-reference-data" class="text-cdes-green-600 hover:underline">CC0 Public Domain</a> |
+            SDKs: <a href="https://github.com/Acidni-LLC/cdes-sdk-python" class="text-cdes-green-600 hover:underline">Apache 2.0</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

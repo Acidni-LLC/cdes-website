@@ -1,0 +1,15 @@
+﻿{
+  "github.copilot.chat.codeGeneration.instructions": [
+    { "file": ".github/copilot-instructions.md" }
+  ],
+  "github.copilot.chat.reviewSelection.instructions": [
+    { "file": ".github/copilot-instructions.md" }
+  ],
+  "chat.agent.enabled": true,
+  "github.copilot.chat.agent.tools.enabled": true,
+  "github.copilot.chat.agent.allowFilesOutsideWorkspace": false,
+  "astro.enableDiagnostics": true,
+  "tailwindCSS.experimental.classRegex": [
+    ["class=\"([^\"]*)\"", "\"([^\"]*)\""]
+  ]
+}
