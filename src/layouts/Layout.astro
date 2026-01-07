@@ -14,7 +14,14 @@ const { title, description = 'CDES - Cannabis Data Exchange Standard' } = Astro.
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title} | CDES</title>
+        <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1DE0HJTKF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G1DE0HJTKF');
+    </script>
   </head>
   <body class="min-h-screen bg-white">
     <nav class="bg-cdes-green-700 text-white">
