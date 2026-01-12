@@ -1,0 +1,118 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="CDES Core - Cannabis Data Standard" description="Core cannabis data models for strains, terpenes, cannabinoids, and COA validation">
+  <!-- Hero -->
+  <div class="bg-gradient-to-br from-cdes-green-700 to-cdes-green-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-flex items-center px-4 py-2 bg-cdes-green-600 rounded-full text-sm font-medium mb-6">Core Package v1.1.0</span>
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">CDES</h1>
+        <p class="text-xl sm:text-2xl text-cdes-green-100 mb-4">Core Cannabis Data Standard</p>
+        <p class="text-base sm:text-xl text-cdes-green-200 max-w-3xl mx-auto mb-8">
+          The foundational package for cannabis data standardization. Define strains, terpene profiles, cannabinoid content, and Certificate of Analysis (COA) data.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <a href="https://pypi.org/project/cdes/" class="px-6 sm:px-8 py-3 sm:py-4 bg-white text-cdes-green-700 rounded-lg font-semibold text-base sm:text-lg hover:bg-cdes-green-50 transition">Install from PyPI</a>
+          <a href="https://github.com/Acidni-LLC/cdes-sdk-python" class="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-cdes-green-700 transition">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Install -->
+  <div class="bg-gray-900 py-8">
+    <div class="max-w-4xl mx-auto px-4">
+      <pre class="text-green-400 text-lg font-mono text-center">pip install cdes</pre>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Core Data Models</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="border rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Strains</h3>
+        <p class="text-gray-600">Indica, Sativa, Hybrid classifications with lineage tracking and genetic information.</p>
+      </div>
+      <div class="border rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Terpenes</h3>
+        <p class="text-gray-600">Complete terpene profiles with concentrations, effects, and aromatic properties.</p>
+      </div>
+      <div class="border rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Cannabinoids</h3>
+        <p class="text-gray-600">THC, CBD, CBG, CBN and more with accurate percentage tracking.</p>
+      </div>
+      <div class="border rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">COA Data</h3>
+        <p class="text-gray-600">Certificate of Analysis parsing and validation for lab results.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code Example -->
+  <div class="bg-gray-50 py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Quick Example</h2>
+      <div class="bg-gray-900 rounded-xl p-6 overflow-x-auto">
+        <pre class="text-sm text-gray-300"><code><span class="text-purple-400">from</span> cdes <span class="text-purple-400">import</span> Strain, TerpeneProfile, StrainType
+
+<span class="text-green-400"># Define a strain</span>
+strain = Strain(
+    name=<span class="text-yellow-300">"Blue Dream"</span>,
+    strain_type=StrainType.HYBRID,
+    thc_percentage=<span class="text-blue-300">21.5</span>,
+    cbd_percentage=<span class="text-blue-300">0.1</span>
+)
+
+<span class="text-green-400"># Add terpene profile</span>
+strain.terpene_profile = TerpeneProfile(
+    myrcene=<span class="text-blue-300">0.45</span>,
+    limonene=<span class="text-blue-300">0.28</span>,
+    caryophyllene=<span class="text-blue-300">0.22</span>,
+    pinene=<span class="text-blue-300">0.15</span>
+)
+
+<span class="text-green-400"># Validate and export</span>
+strain.validate()
+data = strain.to_dict()</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Use Cases -->
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Use Cases</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Dispensaries</h3>
+        <p class="text-gray-600">Standardize menu data across POS systems and online platforms.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Testing Labs</h3>
+        <p class="text-gray-600">Export COA data in a standard format for easy integration.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Software Vendors</h3>
+        <p class="text-gray-600">Build interoperable cannabis software with standard data models.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bg-cdes-green-700 text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to standardize your cannabis data?</h2>
+      <p class="text-xl text-cdes-green-100 mb-8">Install cdes and start building interoperable applications today.</p>
+      <a href="/getting-started" class="inline-block px-8 py-4 bg-white text-cdes-green-700 rounded-lg font-semibold text-lg hover:bg-cdes-green-50 transition">Get Started</a>
+    </div>
+  </div>
+</Layout>

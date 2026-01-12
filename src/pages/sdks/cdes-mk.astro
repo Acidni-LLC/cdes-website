@@ -1,0 +1,118 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="CDES-MK - Cannabis Marketing & CRM" description="Marketing automation and CRM data models for cannabis businesses">
+  <!-- Hero -->
+  <div class="bg-gradient-to-br from-orange-500 to-orange-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-flex items-center px-4 py-2 bg-orange-400 rounded-full text-sm font-medium mb-6">Marketing Package v0.1.0</span>
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">CDES-MK</h1>
+        <p class="text-xl sm:text-2xl text-orange-100 mb-4">Cannabis Marketing & CRM</p>
+        <p class="text-base sm:text-xl text-orange-200 max-w-3xl mx-auto mb-8">
+          Marketing automation and CRM data models for cannabis dispensaries. Track customers, campaigns, loyalty programs, and marketing analytics.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <a href="https://pypi.org/project/cdes-mk/" class="px-6 sm:px-8 py-3 sm:py-4 bg-white text-orange-700 rounded-lg font-semibold text-base sm:text-lg hover:bg-orange-50 transition">Install from PyPI</a>
+          <a href="https://github.com/Acidni-LLC/cdes-mk" class="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-orange-700 transition">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Install -->
+  <div class="bg-gray-900 py-8">
+    <div class="max-w-4xl mx-auto px-4">
+      <pre class="text-green-400 text-lg font-mono text-center">pip install cdes-mk</pre>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Marketing Features</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="border border-orange-200 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Customer Profiles</h3>
+        <p class="text-gray-600">Rich customer profiles with preferences, purchase history, and segmentation.</p>
+      </div>
+      <div class="border border-orange-200 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Campaign Management</h3>
+        <p class="text-gray-600">Email, SMS, and push notification campaign tracking and analytics.</p>
+      </div>
+      <div class="border border-orange-200 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Loyalty Programs</h3>
+        <p class="text-gray-600">Points, tiers, rewards, and redemption tracking for dispensary loyalty.</p>
+      </div>
+      <div class="border border-orange-200 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Analytics</h3>
+        <p class="text-gray-600">Marketing ROI, customer lifetime value, and campaign performance metrics.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code Example -->
+  <div class="bg-gray-50 py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Quick Example</h2>
+      <div class="bg-gray-900 rounded-xl p-6 overflow-x-auto">
+        <pre class="text-sm text-gray-300"><code><span class="text-purple-400">from</span> cdes_mk <span class="text-purple-400">import</span> Customer, Campaign, LoyaltyProgram
+
+<span class="text-green-400"># Create a customer profile</span>
+customer = Customer(
+    customer_id=<span class="text-yellow-300">"C12345"</span>,
+    email=<span class="text-yellow-300">"customer@example.com"</span>,
+    preferences=[<span class="text-yellow-300">"indica"</span>, <span class="text-yellow-300">"edibles"</span>],
+    segment=<span class="text-yellow-300">"high_value"</span>
+)
+
+<span class="text-green-400"># Track campaign engagement</span>
+campaign = Campaign(
+    name=<span class="text-yellow-300">"4/20 Sale"</span>,
+    channel=<span class="text-yellow-300">"email"</span>,
+    sent_at=datetime.now()
+)
+campaign.track_open(customer.customer_id)
+
+<span class="text-green-400"># Award loyalty points</span>
+loyalty = LoyaltyProgram(customer_id=customer.customer_id)
+loyalty.award_points(<span class="text-blue-300">100</span>, reason=<span class="text-yellow-300">"purchase"</span>)</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Use Cases -->
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Use Cases</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center p-6 border rounded-xl">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Targeted Marketing</h3>
+        <p class="text-gray-600">Segment customers by strain preference, purchase frequency, and spending.</p>
+      </div>
+      <div class="text-center p-6 border rounded-xl">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Retention Programs</h3>
+        <p class="text-gray-600">Build loyalty programs that keep customers coming back.</p>
+      </div>
+      <div class="text-center p-6 border rounded-xl">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Performance Tracking</h3>
+        <p class="text-gray-600">Measure campaign ROI and customer acquisition costs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bg-orange-600 text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to supercharge your marketing?</h2>
+      <p class="text-xl text-orange-100 mb-8">Install cdes-mk to build data-driven cannabis marketing campaigns.</p>
+      <a href="/getting-started" class="inline-block px-8 py-4 bg-white text-orange-700 rounded-lg font-semibold text-lg hover:bg-orange-50 transition">Get Started</a>
+    </div>
+  </div>
+</Layout>

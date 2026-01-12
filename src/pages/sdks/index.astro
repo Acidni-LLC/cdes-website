@@ -1,0 +1,148 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="CDES SDKs - Cannabis Data Exchange Standard" description="Complete SDK suite for cannabis data standardization across medical, compliance, marketing, food service, and commerce">
+  <!-- Hero -->
+  <div class="bg-gradient-to-br from-cdes-green-700 to-cdes-green-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">CDES SDK Suite</h1>
+        <p class="text-xl sm:text-2xl text-cdes-green-100 mb-8 max-w-3xl mx-auto">
+          A comprehensive collection of Python packages for cannabis data standardization across every vertical.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="https://pypi.org/search/?q=cdes" class="px-8 py-4 bg-white text-cdes-green-700 rounded-lg font-semibold text-lg hover:bg-cdes-green-50 transition">Browse on PyPI</a>
+          <a href="https://github.com/Acidni-LLC" class="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-cdes-green-700 transition">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SDK Grid -->
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Choose Your SDK</h2>
+    <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+      Each SDK is designed for a specific cannabis industry vertical. Use them individually or combine them for complete coverage.
+    </p>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- CDES Core -->
+      <a href="/sdks/cdes" class="group block border-2 border-cdes-green-200 rounded-2xl p-8 hover:border-cdes-green-500 hover:shadow-xl transition">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-cdes-green-100 rounded-xl flex items-center justify-center text-3xl"></div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 group-hover:text-cdes-green-700">CDES</h3>
+            <span class="text-sm text-cdes-green-600 font-medium">v1.1.0 - Core</span>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">Foundational package for cannabis data. Strains, terpenes, cannabinoids, and COA validation.</p>
+        <code class="text-sm bg-gray-100 px-3 py-1 rounded text-gray-700">pip install cdes</code>
+      </a>
+
+      <!-- CDES-M Medical -->
+      <a href="/sdks/cdes-m" class="group block border-2 border-blue-200 rounded-2xl p-8 hover:border-blue-500 hover:shadow-xl transition">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center text-3xl"></div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 group-hover:text-blue-700">CDES-M</h3>
+            <span class="text-sm text-blue-600 font-medium">v1.0.0 - Medical</span>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">HL7 FHIR-compliant medical cannabis data. EHR integration, patient records, prescriptions.</p>
+        <code class="text-sm bg-gray-100 px-3 py-1 rounded text-gray-700">pip install cdes-m</code>
+      </a>
+
+      <!-- CDES-GDPR Privacy -->
+      <a href="/sdks/cdes-gdpr" class="group block border-2 border-purple-200 rounded-2xl p-8 hover:border-purple-500 hover:shadow-xl transition">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center text-3xl"></div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 group-hover:text-purple-700">CDES-GDPR</h3>
+            <span class="text-sm text-purple-600 font-medium">v1.0.0 - Privacy</span>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">Privacy compliance toolkit. Consent management, data retention, anonymization, SAR handling.</p>
+        <code class="text-sm bg-gray-100 px-3 py-1 rounded text-gray-700">pip install cdes-gdpr</code>
+      </a>
+
+      <!-- CDES-MK Marketing -->
+      <a href="/sdks/cdes-mk" class="group block border-2 border-orange-200 rounded-2xl p-8 hover:border-orange-500 hover:shadow-xl transition">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center text-3xl"></div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 group-hover:text-orange-700">CDES-MK</h3>
+            <span class="text-sm text-orange-600 font-medium">v0.1.0 - Marketing</span>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">Marketing automation & CRM. Customer profiles, campaigns, loyalty programs, analytics.</p>
+        <code class="text-sm bg-gray-100 px-3 py-1 rounded text-gray-700">pip install cdes-mk</code>
+      </a>
+
+      <!-- CDES-FS Food Service -->
+      <a href="/sdks/cdes-fs" class="group block border-2 border-yellow-200 rounded-2xl p-8 hover:border-yellow-500 hover:shadow-xl transition">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center text-3xl"></div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 group-hover:text-yellow-700">CDES-FS</h3>
+            <span class="text-sm text-yellow-600 font-medium">v0.1.0 - Food Service</span>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">Edibles & food production. Recipes, dosing, allergens, nutrition labels, batch tracking.</p>
+        <code class="text-sm bg-gray-100 px-3 py-1 rounded text-gray-700">pip install cdes-fs</code>
+      </a>
+
+      <!-- CDES-C Commerce -->
+      <a href="/sdks/cdes-c" class="group block border-2 border-red-200 rounded-2xl p-8 hover:border-red-500 hover:shadow-xl transition">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center text-3xl"></div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-700">CDES-C</h3>
+            <span class="text-sm text-red-600 font-medium">v0.1.0 - Commerce</span>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">E-commerce & retail. Orders, inventory, payments, delivery, POS integration.</p>
+        <code class="text-sm bg-gray-100 px-3 py-1 rounded text-gray-700">pip install cdes-c</code>
+      </a>
+    </div>
+  </div>
+
+  <!-- Quick Install All -->
+  <div class="bg-gray-900 py-12">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-xl font-bold text-white mb-4">Install All SDKs</h3>
+      <pre class="text-green-400 text-lg font-mono">pip install cdes cdes-m cdes-gdpr cdes-mk cdes-fs cdes-c</pre>
+    </div>
+  </div>
+
+  <!-- Why CDES -->
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Why CDES?</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Interoperability</h3>
+        <p class="text-gray-600">Standard data models that work across any cannabis software platform.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Compliance Ready</h3>
+        <p class="text-gray-600">Built-in support for METRC, FHIR, GDPR, FDA, and state regulations.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Python Native</h3>
+        <p class="text-gray-600">Type-safe, well-documented Python packages with full IDE support.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bg-cdes-green-700 text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to standardize your cannabis data?</h2>
+      <p class="text-xl text-cdes-green-100 mb-8">Get started with CDES today and build interoperable cannabis applications.</p>
+      <a href="/getting-started" class="inline-block px-8 py-4 bg-white text-cdes-green-700 rounded-lg font-semibold text-lg hover:bg-cdes-green-50 transition">Get Started</a>
+    </div>
+  </div>
+</Layout>

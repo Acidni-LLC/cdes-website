@@ -35,7 +35,7 @@ const { title, description = 'CDES - Cannabis Data Exchange Standard' } = Astro.
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9R857XJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+
     <nav class="bg-cdes-green-700 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
@@ -43,29 +43,47 @@ const { title, description = 'CDES - Cannabis Data Exchange Standard' } = Astro.
           <div class="flex items-center">
             <a href="/" class="text-xl font-bold">CDES</a>
           </div>
-          
+
           <!-- Desktop Navigation -->
           <div class="hidden md:flex md:items-center md:space-x-4">
             <a href="/getting-started" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md text-sm">Getting Started</a>
-            <a href="/sdks" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md text-sm">SDKs</a>
-            <a href="/cdes-m" class="px-3 py-2 hover:bg-blue-600 rounded-md bg-blue-700 text-sm">CDES-M</a>
+            
+            <!-- SDKs Dropdown -->
+            <div class="relative group">
+              <button class="px-3 py-2 hover:bg-cdes-green-600 rounded-md text-sm inline-flex items-center">
+                SDKs
+                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div class="py-1">
+                  <a href="/sdks" class="block px-4 py-2 text-sm text-gray-700 hover:bg-cdes-green-50 font-medium border-b">All SDKs</a>
+                  <a href="/sdks/cdes" class="block px-4 py-2 text-sm text-gray-700 hover:bg-cdes-green-50">CDES Core</a>
+                  <a href="/sdks/cdes-m" class="block px-4 py-2 text-sm text-blue-700 hover:bg-blue-50">CDES-M Medical</a>
+                  <a href="/sdks/cdes-gdpr" class="block px-4 py-2 text-sm text-purple-700 hover:bg-purple-50">CDES-GDPR</a>
+                  <a href="/sdks/cdes-mk" class="block px-4 py-2 text-sm text-orange-700 hover:bg-orange-50">CDES-MK Marketing</a>
+                  <a href="/sdks/cdes-fs" class="block px-4 py-2 text-sm text-yellow-700 hover:bg-yellow-50">CDES-FS Food Service</a>
+                  <a href="/sdks/cdes-c" class="block px-4 py-2 text-sm text-red-700 hover:bg-red-50">CDES-C Commerce</a>
+                </div>
+              </div>
+            </div>
+
             <a href="/schemas" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md text-sm">Schemas</a>
             <a href="/terpenes" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md text-sm">Terpenes</a>
             <a href="/community" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md text-sm">Community</a>
             <a href="/about" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md text-sm">About</a>
             <a href="https://pypi.org/search/?q=cdes" target="_blank" class="ml-4 px-4 py-2 bg-white text-cdes-green-700 rounded-md font-medium hover:bg-cdes-green-50 text-sm">PyPI</a>
           </div>
-          
+
           <!-- Mobile menu button -->
           <div class="md:hidden flex items-center gap-2">
             <a href="https://pypi.org/search/?q=cdes" target="_blank" class="px-3 py-1.5 bg-white text-cdes-green-700 rounded-md font-medium text-sm">PyPI</a>
             <button id="mobile-menu-button" type="button" class="p-2 rounded-md hover:bg-cdes-green-600 focus:outline-none" aria-expanded="false">
               <span class="sr-only">Open menu</span>
-              <!-- Hamburger icon -->
               <svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-              <!-- Close icon (hidden by default) -->
               <svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -73,17 +91,30 @@ const { title, description = 'CDES - Cannabis Data Exchange Standard' } = Astro.
           </div>
         </div>
       </div>
-      
+
       <!-- Mobile menu -->
       <div id="mobile-menu" class="hidden md:hidden bg-cdes-green-800">
         <div class="px-4 pt-2 pb-4 space-y-1">
           <a href="/getting-started" class="block px-3 py-3 rounded-md hover:bg-cdes-green-600 text-base">Getting Started</a>
-          <a href="/sdks" class="block px-3 py-3 rounded-md hover:bg-cdes-green-600 text-base">SDKs</a>
-          <a href="/cdes-m" class="block px-3 py-3 rounded-md bg-blue-700 hover:bg-blue-600 text-base">CDES-M</a>
-          <a href="/schemas" class="block px-3 py-3 rounded-md hover:bg-cdes-green-600 text-base">Schemas</a>
-          <a href="/terpenes" class="block px-3 py-3 rounded-md hover:bg-cdes-green-600 text-base">Terpenes</a>
-          <a href="/community" class="block px-3 py-3 rounded-md hover:bg-cdes-green-600 text-base">Community</a>
-          <a href="/about" class="block px-3 py-3 rounded-md hover:bg-cdes-green-600 text-base">About</a>
+          
+          <!-- Mobile SDKs Section -->
+          <div class="border-t border-cdes-green-600 pt-2 mt-2">
+            <p class="px-3 py-2 text-cdes-green-300 text-sm font-medium">SDKs</p>
+            <a href="/sdks" class="block px-6 py-2 rounded-md hover:bg-cdes-green-600 text-base">All SDKs</a>
+            <a href="/sdks/cdes" class="block px-6 py-2 rounded-md hover:bg-cdes-green-600 text-base">CDES Core</a>
+            <a href="/sdks/cdes-m" class="block px-6 py-2 rounded-md bg-blue-700 hover:bg-blue-600 text-base">CDES-M Medical</a>
+            <a href="/sdks/cdes-gdpr" class="block px-6 py-2 rounded-md hover:bg-cdes-green-600 text-base">CDES-GDPR</a>
+            <a href="/sdks/cdes-mk" class="block px-6 py-2 rounded-md hover:bg-cdes-green-600 text-base">CDES-MK Marketing</a>
+            <a href="/sdks/cdes-fs" class="block px-6 py-2 rounded-md hover:bg-cdes-green-600 text-base">CDES-FS Food Service</a>
+            <a href="/sdks/cdes-c" class="block px-6 py-2 rounded-md hover:bg-cdes-green-600 text-base">CDES-C Commerce</a>
+          </div>
+          
+          <div class="border-t border-cdes-green-600 pt-2 mt-2">
+            <a href="/schemas" class="block px-3 py-3 rounded-md hover:bg-cdes-green-600 text-base">Schemas</a>
+            <a href="/terpenes" class="block px-3 py-3 rounded-md hover:bg-cdes-green-600 text-base">Terpenes</a>
+            <a href="/community" class="block px-3 py-3 rounded-md hover:bg-cdes-green-600 text-base">Community</a>
+            <a href="/about" class="block px-3 py-3 rounded-md hover:bg-cdes-green-600 text-base">About</a>
+          </div>
           <div class="pt-2 border-t border-cdes-green-600">
             <a href="https://github.com/Acidni-LLC/cdes-spec" target="_blank" class="block px-3 py-3 rounded-md hover:bg-cdes-green-600 text-base">GitHub</a>
           </div>
@@ -112,7 +143,7 @@ const { title, description = 'CDES - Cannabis Data Exchange Standard' } = Astro.
         </div>
       </div>
     </footer>
-    
+
     <!-- Mobile menu toggle script -->
     <script is:inline>
       document.addEventListener('DOMContentLoaded', function() {
@@ -120,7 +151,7 @@ const { title, description = 'CDES - Cannabis Data Exchange Standard' } = Astro.
         const mobileMenu = document.getElementById('mobile-menu');
         const iconOpen = document.getElementById('menu-icon-open');
         const iconClose = document.getElementById('menu-icon-close');
-        
+
         if (menuButton && mobileMenu) {
           menuButton.addEventListener('click', function() {
             const isOpen = !mobileMenu.classList.contains('hidden');

@@ -1,0 +1,115 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="CDES-FS - Cannabis Food Service" description="Data models for cannabis-infused food service and edibles production">
+  <!-- Hero -->
+  <div class="bg-gradient-to-br from-yellow-500 to-yellow-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-flex items-center px-4 py-2 bg-yellow-400 text-yellow-900 rounded-full text-sm font-medium mb-6">Food Service v0.1.0</span>
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">CDES-FS</h1>
+        <p class="text-xl sm:text-2xl text-yellow-100 mb-4">Cannabis Food Service & Edibles</p>
+        <p class="text-base sm:text-xl text-yellow-200 max-w-3xl mx-auto mb-8">
+          Data models for cannabis-infused food products. Track recipes, dosing, nutritional info, allergens, and production batches.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <a href="https://pypi.org/project/cdes-fs/" class="px-6 sm:px-8 py-3 sm:py-4 bg-white text-yellow-700 rounded-lg font-semibold text-base sm:text-lg hover:bg-yellow-50 transition">Install from PyPI</a>
+          <a href="https://github.com/Acidni-LLC/cdes-fs" class="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-yellow-700 transition">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Install -->
+  <div class="bg-gray-900 py-8">
+    <div class="max-w-4xl mx-auto px-4">
+      <pre class="text-green-400 text-lg font-mono text-center">pip install cdes-fs</pre>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Food Service Features</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="border border-yellow-200 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Recipe Management</h3>
+        <p class="text-gray-600">Track edible recipes with ingredients, instructions, and cannabis dosing.</p>
+      </div>
+      <div class="border border-yellow-200 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Dosing Calculator</h3>
+        <p class="text-gray-600">Calculate THC/CBD per serving with decarboxylation factors.</p>
+      </div>
+      <div class="border border-yellow-200 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Allergen Tracking</h3>
+        <p class="text-gray-600">FDA-compliant allergen labeling and ingredient declarations.</p>
+      </div>
+      <div class="border border-yellow-200 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="text-4xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Batch Production</h3>
+        <p class="text-gray-600">Production batch tracking with yield calculations and QC records.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code Example -->
+  <div class="bg-gray-50 py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Quick Example</h2>
+      <div class="bg-gray-900 rounded-xl p-6 overflow-x-auto">
+        <pre class="text-sm text-gray-300"><code><span class="text-purple-400">from</span> cdes_fs <span class="text-purple-400">import</span> EdibleRecipe, DosingCalculator, Allergens
+
+<span class="text-green-400"># Create an edible recipe</span>
+recipe = EdibleRecipe(
+    name=<span class="text-yellow-300">"Cannabis Brownie"</span>,
+    servings=<span class="text-blue-300">12</span>,
+    cannabis_input_mg=<span class="text-blue-300">1200</span>,  <span class="text-green-400"># Total THC in batch</span>
+    allergens=[Allergens.WHEAT, Allergens.EGGS, Allergens.MILK]
+)
+
+<span class="text-green-400"># Calculate per-serving dose</span>
+calc = DosingCalculator(recipe)
+per_serving = calc.thc_per_serving()  <span class="text-green-400"># 100mg THC</span>
+
+<span class="text-green-400"># Generate nutrition label</span>
+label = recipe.generate_label()
+<span class="text-purple-400">print</span>(label.allergen_statement)
+<span class="text-green-400"># "Contains: Wheat, Eggs, Milk"</span></code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compliance -->
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Food Safety Compliance</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center p-6 border rounded-xl">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">HACCP Ready</h3>
+        <p class="text-gray-600">Support for Hazard Analysis Critical Control Point plans.</p>
+      </div>
+      <div class="text-center p-6 border rounded-xl">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">FDA Labeling</h3>
+        <p class="text-gray-600">Generate FDA-compliant nutrition facts and allergen labels.</p>
+      </div>
+      <div class="text-center p-6 border rounded-xl">
+        <div class="text-5xl mb-4"></div>
+        <h3 class="text-xl font-bold mb-2">Traceability</h3>
+        <p class="text-gray-600">Full ingredient and batch traceability for recalls.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bg-yellow-600 text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to build edibles software?</h2>
+      <p class="text-xl text-yellow-100 mb-8">Install cdes-fs to manage cannabis food production with confidence.</p>
+      <a href="/getting-started" class="inline-block px-8 py-4 bg-white text-yellow-700 rounded-lg font-semibold text-lg hover:bg-yellow-50 transition">Get Started</a>
+    </div>
+  </div>
+</Layout>
