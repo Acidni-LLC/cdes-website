@@ -1,0 +1,435 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="CDES-M Presentation | Cannabis Data Exchange Standard">
+  <style>
+    .slide {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      scroll-snap-align: start;
+    }
+    .slides-container {
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100vh;
+    }
+    .slide-number {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      z-index: 50;
+    }
+  </style>
+
+  <div class="slides-container" id="slides">
+    <!-- Slide 1: Title -->
+    <div class="slide bg-gradient-to-br from-blue-700 to-blue-900 text-white">
+      <div class="text-center max-w-4xl">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">CDES-M</h1>
+        <p class="text-3xl md:text-4xl text-blue-100 mb-4">Medical Extension</p>
+        <p class="text-xl text-blue-200 mb-8">Bridging Cannabis Data to Healthcare Standards</p>
+        <div class="flex gap-4 justify-center text-sm">
+          <span class="px-4 py-2 bg-blue-600 rounded-full">FHIR R4</span>
+          <span class="px-4 py-2 bg-blue-600 rounded-full">ICD-10-CM</span>
+          <span class="px-4 py-2 bg-blue-600 rounded-full">SNOMED CT</span>
+          <span class="px-4 py-2 bg-blue-600 rounded-full">NPI</span>
+        </div>
+        <p class="text-blue-300 mt-12 text-sm">Scroll down or use arrow keys to navigate</p>
+      </div>
+    </div>
+
+    <!-- Slide 2: The Problem -->
+    <div class="slide bg-gray-900 text-white">
+      <div class="max-w-4xl">
+        <h2 class="text-4xl font-bold mb-8 text-red-400">The Problem</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4 text-yellow-400"> Healthcare Systems</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li> Use FHIR, ICD-10, SNOMED CT</li>
+              <li> Speak "diagnosis codes"</li>
+              <li> Require NPI for providers</li>
+              <li> Track patient outcomes via LOINC</li>
+            </ul>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4 text-green-400"> Cannabis Systems</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li> Use CDES, METRC, BioTrack</li>
+              <li> Speak "strain names"</li>
+              <li> Track terpene profiles</li>
+              <li> No healthcare interoperability</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center mt-8 text-2xl text-red-300">
+           These worlds don't talk to each other
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: The Solution -->
+    <div class="slide bg-blue-50">
+      <div class="max-w-5xl">
+        <h2 class="text-4xl font-bold mb-8 text-blue-800 text-center">The Solution: CDES-M as a Bridge</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+          <div class="bg-green-100 p-8 rounded-xl text-center w-72">
+            <div class="text-5xl mb-4"></div>
+            <h3 class="text-2xl font-bold text-green-800">CDES</h3>
+            <p class="text-green-700">Cannabis Data Standard</p>
+            <div class="mt-4 text-sm text-left text-green-700">
+              <p> Strains & Genetics</p>
+              <p> Terpene Profiles</p>
+              <p> COA Lab Results</p>
+              <p> Product Catalog</p>
+            </div>
+          </div>
+          <div class="text-5xl text-blue-600 font-bold"></div>
+          <div class="bg-blue-200 p-8 rounded-xl text-center w-72 border-4 border-blue-500">
+            <div class="text-5xl mb-4"></div>
+            <h3 class="text-2xl font-bold text-blue-800">CDES-M</h3>
+            <p class="text-blue-700 font-semibold">Medical Bridge</p>
+            <div class="mt-4 text-sm text-left text-blue-700">
+              <p> Provider  Practitioner</p>
+              <p> Patient  Patient</p>
+              <p> Rx  MedicationRequest</p>
+              <p> Efficacy  Observation</p>
+            </div>
+          </div>
+          <div class="text-5xl text-blue-600 font-bold"></div>
+          <div class="bg-purple-100 p-8 rounded-xl text-center w-72">
+            <div class="text-5xl mb-4"></div>
+            <h3 class="text-2xl font-bold text-purple-800">Healthcare</h3>
+            <p class="text-purple-700">Existing Standards</p>
+            <div class="mt-4 text-sm text-left text-purple-700">
+              <p> HL7 FHIR R4</p>
+              <p> ICD-10-CM / ICD-11</p>
+              <p> SNOMED CT</p>
+              <p> NPI / LOINC / CPT</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-center mt-8 text-xl text-blue-800">
+          <strong>CDES-M doesn't replace standardsit maps INTO them</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 4: Standards Integration Map -->
+    <div class="slide bg-white">
+      <div class="max-w-5xl">
+        <h2 class="text-4xl font-bold mb-8 text-gray-900 text-center">Standards Integration Map</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-blue-700 text-white">
+                <th class="p-4">Standard</th>
+                <th class="p-4">Purpose</th>
+                <th class="p-4">CDES-M Usage</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr class="bg-gray-50">
+                <td class="p-4 font-semibold">HL7 FHIR R4</td>
+                <td class="p-4">Healthcare interoperability</td>
+                <td class="p-4">Full resource mapping (Practitioner, Patient, MedicationRequest, Observation)</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold">ICD-10-CM</td>
+                <td class="p-4">Diagnosis codes</td>
+                <td class="p-4">Condition.icd10_code (G89.29, F43.10, C34.90)</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="p-4 font-semibold">SNOMED CT</td>
+                <td class="p-4">Clinical terminology</td>
+                <td class="p-4">Condition.snomed_code for precise descriptions</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold">NPI</td>
+                <td class="p-4">Provider identification</td>
+                <td class="p-4">Provider.npi (10-digit national identifier)</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="p-4 font-semibold">LOINC</td>
+                <td class="p-4">Lab observations</td>
+                <td class="p-4">EfficacyReport codes (77580-4 for PRO)</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold">CPT</td>
+                <td class="p-4">Billing codes</td>
+                <td class="p-4">Future: Consultation coding (99xxx)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5: Core Entities -->
+    <div class="slide bg-gray-100">
+      <div class="max-w-5xl">
+        <h2 class="text-4xl font-bold mb-8 text-gray-900 text-center">Core Entities</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-bold text-blue-700 mb-2">Provider</h3>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li> NPI (10-digit)</li>
+              <li> State License</li>
+              <li> DEA Number</li>
+              <li> MMJ Certification</li>
+              <li> Specialty</li>
+            </ul>
+            <div class="mt-4 text-xs text-gray-400"> FHIR Practitioner</div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-bold text-blue-700 mb-2">Patient</h3>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li> MMJ Card</li>
+              <li> Conditions (ICD-10)</li>
+              <li> Cannabis History</li>
+              <li> Terpene Fingerprint</li>
+              <li> Consent Preferences</li>
+            </ul>
+            <div class="mt-4 text-xs text-gray-400"> FHIR Patient (PHI)</div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-bold text-blue-700 mb-2">Recommendation</h3>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li> Target Terpene Profile</li>
+              <li> Cannabinoid Targets</li>
+              <li> Dosing Guidance</li>
+              <li> Rationale</li>
+              <li> Valid Period</li>
+            </ul>
+            <div class="mt-4 text-xs text-gray-400"> FHIR MedicationRequest</div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-bold text-blue-700 mb-2">EfficacyReport</h3>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li> Effectiveness Rating</li>
+              <li> Symptom Scores</li>
+              <li> Side Effects</li>
+              <li> Duration/Onset</li>
+              <li> Would Use Again?</li>
+            </ul>
+            <div class="mt-4 text-xs text-gray-400"> FHIR Observation (PRO)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: How It Works -->
+    <div class="slide bg-gradient-to-br from-green-700 to-green-900 text-white">
+      <div class="max-w-4xl">
+        <h2 class="text-4xl font-bold mb-8 text-center">How It Works</h2>
+        <div class="space-y-6">
+          <div class="flex items-center gap-4 bg-green-800 p-6 rounded-lg">
+            <div class="text-4xl">1</div>
+            <div>
+              <h3 class="text-xl font-semibold">Provider creates recommendation</h3>
+              <p class="text-green-200">Selects target terpene profile based on patient conditions</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 bg-green-800 p-6 rounded-lg">
+            <div class="text-4xl">2</div>
+            <div>
+              <h3 class="text-xl font-semibold">CDES-M matches products</h3>
+              <p class="text-green-200">Uses CDES strain/product data to find matching dispensary inventory</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 bg-green-800 p-6 rounded-lg">
+            <div class="text-4xl">3</div>
+            <div>
+              <h3 class="text-xl font-semibold">Patient tracks efficacy</h3>
+              <p class="text-green-200">Reports outcomes via EfficacyReport (Patient-Reported Outcomes)</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 bg-green-800 p-6 rounded-lg">
+            <div class="text-4xl">4</div>
+            <div>
+              <h3 class="text-xl font-semibold">Data flows to EHR</h3>
+              <p class="text-green-200">FHIR R4 export enables integration with healthcare systems</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 7: Python SDK -->
+    <div class="slide bg-gray-900 text-white">
+      <div class="max-w-4xl">
+        <h2 class="text-4xl font-bold mb-8 text-center">Python SDK</h2>
+        <div class="bg-gray-800 rounded-lg p-6 font-mono text-sm overflow-x-auto">
+          <div class="text-green-400 mb-2"># Install</div>
+          <div class="text-white mb-6">pip install cdes-m</div>
+          
+          <div class="text-green-400 mb-2"># Create a recommendation</div>
+          <div class="text-gray-300">
+            <span class="text-purple-400">from</span> cdes_m <span class="text-purple-400">import</span> Recommendation, TargetProfile<br>
+            <span class="text-purple-400">from</span> cdes_m.fhir <span class="text-purple-400">import</span> recommendation_to_medication_request<br><br>
+            
+            rec = Recommendation(<br>
+            &nbsp;&nbsp;patient_id=patient.id,<br>
+            &nbsp;&nbsp;provider_id=provider.id,<br>
+            &nbsp;&nbsp;target_profile=TargetProfile(<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;terpene_profile={<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-yellow-300">"myrcene"</span>: <span class="text-blue-300">0.8</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-yellow-300">"caryophyllene"</span>: <span class="text-blue-300">0.5</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;),<br>
+            &nbsp;&nbsp;rationale=<span class="text-yellow-300">"Anti-inflammatory profile for COPD"</span><br>
+            )<br><br>
+            
+            <span class="text-green-400"># Convert to FHIR MedicationRequest</span><br>
+            fhir_rx = recommendation_to_medication_request(rec, patient.id, provider.id)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 8: Use Cases -->
+    <div class="slide bg-blue-50">
+      <div class="max-w-5xl">
+        <h2 class="text-4xl font-bold mb-8 text-gray-900 text-center">Use Cases</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-bold text-blue-700 mb-2">MMJ Clinics</h3>
+            <p class="text-gray-600 text-sm">Structured recommendations with ICD-10 coding for qualifying conditions</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-bold text-blue-700 mb-2">Dispensaries</h3>
+            <p class="text-gray-600 text-sm">Match recommendations to inventory using terpene profiles</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-bold text-blue-700 mb-2">Patient Apps</h3>
+            <p class="text-gray-600 text-sm">Track efficacy, build terpene fingerprint, share with provider</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-bold text-blue-700 mb-2">EHR Integration</h3>
+            <p class="text-gray-600 text-sm">FHIR R4 export to Epic, Cerner, Allscripts, etc.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-bold text-blue-700 mb-2">Insurance</h3>
+            <p class="text-gray-600 text-sm">Standardized coding for future reimbursement models</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-bold text-blue-700 mb-2">Research</h3>
+            <p class="text-gray-600 text-sm">Anonymized efficacy data for evidence-based protocols</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 9: Governance -->
+    <div class="slide bg-white">
+      <div class="max-w-4xl">
+        <h2 class="text-4xl font-bold mb-8 text-gray-900 text-center">Governance & Community</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="border border-gray-200 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-blue-700 mb-4"> Technical WG</h3>
+            <p class="text-gray-600 mb-2">Schema development, FHIR mapping, SDK</p>
+            <p class="font-semibold">Tuesdays @ 3:00 PM ET</p>
+            <p class="text-sm text-gray-500">Bi-weekly</p>
+          </div>
+          <div class="border border-gray-200 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-blue-700 mb-4"> Medical Advisory Board</h3>
+            <p class="text-gray-600 mb-2">Clinical protocols, evidence review</p>
+            <p class="font-semibold">2nd Tuesday @ 12:00 PM ET</p>
+            <p class="text-sm text-gray-500">Monthly</p>
+          </div>
+          <div class="border border-gray-200 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-blue-700 mb-4"> Payer/Provider Forum</h3>
+            <p class="text-gray-600 mb-2">Insurance, reimbursement, enterprise</p>
+            <p class="font-semibold">3rd Thursday @ 2:00 PM ET</p>
+            <p class="text-sm text-gray-500">Inaugural: Jan 16, 2026</p>
+          </div>
+          <div class="border border-gray-200 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-blue-700 mb-4"> Compliance WG</h3>
+            <p class="text-gray-600 mb-2">HIPAA, state regulations, audits</p>
+            <p class="font-semibold">1st & 3rd Wednesday @ 1:00 PM ET</p>
+            <p class="text-sm text-gray-500">Bi-weekly</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 10: Get Involved -->
+    <div class="slide bg-gradient-to-br from-blue-700 to-blue-900 text-white">
+      <div class="max-w-4xl text-center">
+        <h2 class="text-4xl font-bold mb-8">Get Involved</h2>
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="bg-blue-800 p-6 rounded-lg">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-semibold mb-2">Read the Spec</h3>
+            <p class="text-blue-200 text-sm mb-4">Full specification on GitHub</p>
+            <a href="https://github.com/Acidni-LLC/cdes-m-spec" class="text-white underline">View Specification</a>
+          </div>
+          <div class="bg-blue-800 p-6 rounded-lg">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-semibold mb-2">Use the SDK</h3>
+            <p class="text-blue-200 text-sm mb-4">Python SDK on PyPI</p>
+            <a href="https://pypi.org/project/cdes-m/" class="text-white underline">pip install cdes-m</a>
+          </div>
+          <div class="bg-blue-800 p-6 rounded-lg">
+            <div class="text-3xl mb-4"></div>
+            <h3 class="text-xl font-semibold mb-2">Join a Meeting</h3>
+            <p class="text-blue-200 text-sm mb-4">Request calendar invite</p>
+            <a href="mailto:cdes@acidni.net" class="text-white underline">cdes@acidni.net</a>
+          </div>
+        </div>
+        <div class="text-blue-200">
+          <p class="text-xl mb-4">Questions?</p>
+          <p class="text-2xl font-bold">cdes@acidni.net</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number" id="slide-number">1 / 10</div>
+
+  <script is:inline>
+    const slides = document.querySelectorAll('.slide');
+    const slideNumber = document.getElementById('slide-number');
+    const container = document.getElementById('slides');
+    
+    const updateSlideNumber = () => {
+      const scrollTop = container.scrollTop;
+      const slideHeight = window.innerHeight;
+      const currentSlide = Math.round(scrollTop / slideHeight) + 1;
+      slideNumber.textContent = `${currentSlide} / ${slides.length}`;
+    };
+    
+    container.addEventListener('scroll', updateSlideNumber);
+    
+    document.addEventListener('keydown', (e) => {
+      const slideHeight = window.innerHeight;
+      if (e.key === 'ArrowDown' || e.key === ' ' || e.key === 'PageDown') {
+        e.preventDefault();
+        container.scrollBy({ top: slideHeight, behavior: 'smooth' });
+      } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+        e.preventDefault();
+        container.scrollBy({ top: -slideHeight, behavior: 'smooth' });
+      }
+    });
+  </script>
+</Layout>

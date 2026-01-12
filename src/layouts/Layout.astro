@@ -1,4 +1,4 @@
----
+﻿---
 interface Props {
   title: string;
   description?: string;
@@ -42,6 +42,7 @@ const { title, description = 'CDES - Cannabis Data Exchange Standard' } = Astro.
             <div class="hidden md:block ml-10">
               <div class="flex items-baseline space-x-4">
                 <a href="/getting-started" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Getting Started</a>
+                <a href="/cdes-m" class="px-3 py-2 hover:bg-blue-600 rounded-md bg-blue-700">CDES-M</a>
                 <a href="/schemas" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Schemas</a>
                 <a href="/terpenes" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Terpenes</a>
                 <a href="/roadmap" class="px-3 py-2 hover:bg-cdes-green-600 rounded-md">Roadmap</a>
@@ -84,3 +85,4 @@ const { title, description = 'CDES - Cannabis Data Exchange Standard' } = Astro.
     </footer>
   </body>
 </html>
+
