@@ -2,16 +2,16 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="CDES-MK - Cannabis Marketing & CRM" description="Marketing automation and CRM data models for cannabis businesses">
+<Layout title="CDES-MK - Cannabis Marketing & Loyalty" description="Loyalty programs, campaigns, deals, and customer segmentation for cannabis dispensaries">
   <!-- Hero -->
   <div class="bg-gradient-to-br from-orange-500 to-orange-700 text-white">
     <div class="max-w-7xl mx-auto px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
       <div class="text-center">
         <span class="inline-flex items-center px-4 py-2 bg-orange-400 rounded-full text-sm font-medium mb-6">Marketing Package v0.1.0</span>
         <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">CDES-MK</h1>
-        <p class="text-xl sm:text-2xl text-orange-100 mb-4">Cannabis Marketing & CRM</p>
+        <p class="text-xl sm:text-2xl text-orange-100 mb-4">Marketing & Loyalty Programs</p>
         <p class="text-base sm:text-xl text-orange-200 max-w-3xl mx-auto mb-8">
-          Marketing automation and CRM data models for cannabis dispensaries. Track customers, campaigns, loyalty programs, and marketing analytics.
+          Loyalty programs, campaigns, deals, and customer segmentation. Integrates with AlpineIQ, Springbig, Fyllo, Surfside, and Headset.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           <a href="https://pypi.org/project/cdes-mk/" class="px-6 sm:px-8 py-3 sm:py-4 bg-white text-orange-700 rounded-lg font-semibold text-base sm:text-lg hover:bg-orange-50 transition">Install from PyPI</a>
@@ -60,27 +60,29 @@ import Layout from '../../layouts/Layout.astro';
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Quick Example</h2>
       <div class="bg-gray-900 rounded-xl p-6 overflow-x-auto">
-        <pre class="text-sm text-gray-300"><code><span class="text-purple-400">from</span> cdes_mk <span class="text-purple-400">import</span> Customer, Campaign, LoyaltyProgram
+        <pre class="text-sm text-gray-300"><code><span class="text-purple-400">from</span> cdes_mk <span class="text-purple-400">import</span> Customer, LoyaltyProgram, Deal, DealType
 
-<span class="text-green-400"># Create a customer profile</span>
+<span class="text-green-400"># Create a customer with consent</span>
 customer = Customer(
-    customer_id=<span class="text-yellow-300">"C12345"</span>,
-    email=<span class="text-yellow-300">"customer@example.com"</span>,
-    preferences=[<span class="text-yellow-300">"indica"</span>, <span class="text-yellow-300">"edibles"</span>],
-    segment=<span class="text-yellow-300">"high_value"</span>
+    status=CustomerStatus.ACTIVE,
+    loyalty_member_id=<span class="text-yellow-300">"LM-001"</span>
 )
 
-<span class="text-green-400"># Track campaign engagement</span>
-campaign = Campaign(
-    name=<span class="text-yellow-300">"4/20 Sale"</span>,
-    channel=<span class="text-yellow-300">"email"</span>,
-    sent_at=datetime.now()
+<span class="text-green-400"># Set up loyalty program</span>
+loyalty = LoyaltyProgram(
+    name=<span class="text-yellow-300">"Green Rewards"</span>,
+    points_per_dollar=Decimal(<span class="text-yellow-300">"1.0"</span>),
+    enrollment_bonus=<span class="text-blue-300">100</span>,
+    birthday_bonus=<span class="text-blue-300">50</span>
 )
-campaign.track_open(customer.customer_id)
 
-<span class="text-green-400"># Award loyalty points</span>
-loyalty = LoyaltyProgram(customer_id=customer.customer_id)
-loyalty.award_points(<span class="text-blue-300">100</span>, reason=<span class="text-yellow-300">"purchase"</span>)</code></pre>
+<span class="text-green-400"># Create a 4/20 deal</span>
+deal = Deal(
+    name=<span class="text-yellow-300">"4/20 Flash Sale"</span>,
+    deal_type=DealType.PERCENTAGE_OFF,
+    value=Decimal(<span class="text-yellow-300">"20.0"</span>),
+    promo_code=<span class="text-yellow-300">"420SALE"</span>
+)</code></pre>
       </div>
     </div>
   </div>

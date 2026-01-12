@@ -2,16 +2,16 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="CDES-FS - Cannabis Food Service" description="Data models for cannabis-infused food service and edibles production">
+<Layout title="CDES-FS - Cannabis Food Service" description="Recipes, dosing, menus, and food safety for cannabis-infused culinary applications">
   <!-- Hero -->
   <div class="bg-gradient-to-br from-yellow-500 to-yellow-700 text-white">
     <div class="max-w-7xl mx-auto px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
       <div class="text-center">
         <span class="inline-flex items-center px-4 py-2 bg-yellow-400 text-yellow-900 rounded-full text-sm font-medium mb-6">Food Service v0.1.0</span>
         <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">CDES-FS</h1>
-        <p class="text-xl sm:text-2xl text-yellow-100 mb-4">Cannabis Food Service & Edibles</p>
+        <p class="text-xl sm:text-2xl text-yellow-100 mb-4">Cannabis Culinary & Food Service</p>
         <p class="text-base sm:text-xl text-yellow-200 max-w-3xl mx-auto mb-8">
-          Data models for cannabis-infused food products. Track recipes, dosing, nutritional info, allergens, and production batches.
+          Recipes, ingredients, dosing calculations, menus, and food safety for cannabis-infused restaurants, edible manufacturers, and catering.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           <a href="https://pypi.org/project/cdes-fs/" class="px-6 sm:px-8 py-3 sm:py-4 bg-white text-yellow-700 rounded-lg font-semibold text-base sm:text-lg hover:bg-yellow-50 transition">Install from PyPI</a>
@@ -60,24 +60,23 @@ import Layout from '../../layouts/Layout.astro';
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Quick Example</h2>
       <div class="bg-gray-900 rounded-xl p-6 overflow-x-auto">
-        <pre class="text-sm text-gray-300"><code><span class="text-purple-400">from</span> cdes_fs <span class="text-purple-400">import</span> EdibleRecipe, DosingCalculator, Allergens
+        <pre class="text-sm text-gray-300"><code><span class="text-purple-400">from</span> cdes_fs <span class="text-purple-400">import</span> Recipe, CannabisIngredient, IngredientType, AllergenType
 
-<span class="text-green-400"># Create an edible recipe</span>
-recipe = EdibleRecipe(
-    name=<span class="text-yellow-300">"Cannabis Brownie"</span>,
-    servings=<span class="text-blue-300">12</span>,
-    cannabis_input_mg=<span class="text-blue-300">1200</span>,  <span class="text-green-400"># Total THC in batch</span>
-    allergens=[Allergens.WHEAT, Allergens.EGGS, Allergens.MILK]
+<span class="text-green-400"># Define cannabis ingredient with COA link</span>
+butter = CannabisIngredient(
+    name=<span class="text-yellow-300">"Cannabis Butter"</span>,
+    ingredient_type=IngredientType.BUTTER,
+    thc_mg_per_gram=Decimal(<span class="text-yellow-300">"10.0"</span>),
+    cbd_mg_per_gram=Decimal(<span class="text-yellow-300">"0.5"</span>)
 )
 
-<span class="text-green-400"># Calculate per-serving dose</span>
-calc = DosingCalculator(recipe)
-per_serving = calc.thc_per_serving()  <span class="text-green-400"># 100mg THC</span>
-
-<span class="text-green-400"># Generate nutrition label</span>
-label = recipe.generate_label()
-<span class="text-purple-400">print</span>(label.allergen_statement)
-<span class="text-green-400"># "Contains: Wheat, Eggs, Milk"</span></code></pre>
+<span class="text-green-400"># Create a recipe</span>
+recipe = Recipe(
+    name=<span class="text-yellow-300">"Cannabis Brownie"</span>,
+    category=RecipeCategory.BAKED_GOOD,
+    servings=<span class="text-blue-300">12</span>,
+    allergens=[AllergenType.WHEAT, AllergenType.EGGS, AllergenType.MILK]
+)</code></pre>
       </div>
     </div>
   </div>

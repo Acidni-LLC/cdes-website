@@ -2,16 +2,16 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="CDES-C - Cannabis Commerce & E-Commerce" description="E-commerce data models for cannabis retail and online sales">
+<Layout title="CDES-C - Cannabis Commerce & EDI" description="GS1 identifiers, EDI X12 documents, product catalogs, and inventory for cannabis B2B">
   <!-- Hero -->
   <div class="bg-gradient-to-br from-red-600 to-red-800 text-white">
     <div class="max-w-7xl mx-auto px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
       <div class="text-center">
         <span class="inline-flex items-center px-4 py-2 bg-red-500 rounded-full text-sm font-medium mb-6">Commerce Package v0.1.0</span>
         <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">CDES-C</h1>
-        <p class="text-xl sm:text-2xl text-red-100 mb-4">Cannabis Commerce & E-Commerce</p>
+        <p class="text-xl sm:text-2xl text-red-100 mb-4">Enterprise Commerce & EDI</p>
         <p class="text-base sm:text-xl text-red-200 max-w-3xl mx-auto mb-8">
-          E-commerce and retail data models for cannabis dispensaries. Orders, inventory, payments, and delivery management.
+          GS1 identifiers (GTIN, GLN, SSCC), EDI X12 documents, product catalogs, purchase orders, and chain of custody. Integrates with Square, Dutchie, Treez, Flowhub, Shopify.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           <a href="https://pypi.org/project/cdes-c/" class="px-6 sm:px-8 py-3 sm:py-4 bg-white text-red-700 rounded-lg font-semibold text-base sm:text-lg hover:bg-red-50 transition">Install from PyPI</a>
@@ -60,27 +60,24 @@ import Layout from '../../layouts/Layout.astro';
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Quick Example</h2>
       <div class="bg-gray-900 rounded-xl p-6 overflow-x-auto">
-        <pre class="text-sm text-gray-300"><code><span class="text-purple-400">from</span> cdes_c <span class="text-purple-400">import</span> Order, CartItem, DeliveryZone
+        <pre class="text-sm text-gray-300"><code><span class="text-purple-400">from</span> cdes_c <span class="text-purple-400">import</span> CannabisProduct, PurchaseOrder, ProductCategory
 
-<span class="text-green-400"># Create an order</span>
-order = Order(
-    customer_id=<span class="text-yellow-300">"C12345"</span>,
-    dispensary_id=<span class="text-yellow-300">"D001"</span>,
-    order_type=<span class="text-yellow-300">"delivery"</span>
+<span class="text-green-400"># Create a product</span>
+product = CannabisProduct(
+    sku=<span class="text-yellow-300">"BD-3.5G"</span>,
+    gtin=<span class="text-yellow-300">"00012345678905"</span>,
+    name=<span class="text-yellow-300">"Blue Dream 3.5g"</span>,
+    category=ProductCategory.FLOWER,
+    strain_name=<span class="text-yellow-300">"Blue Dream"</span>,
+    thc_percentage=Decimal(<span class="text-yellow-300">"21.5"</span>)
 )
 
-<span class="text-green-400"># Add items to cart</span>
-order.add_item(CartItem(
-    product_sku=<span class="text-yellow-300">"BD-3.5G"</span>,
-    quantity=<span class="text-blue-300">1</span>,
-    unit_price=<span class="text-blue-300">45.00</span>
-))
-
-<span class="text-green-400"># Check delivery zone</span>
-zone = DeliveryZone.from_address(order.delivery_address)
-<span class="text-purple-400">if</span> zone.is_serviceable:
-    order.assign_driver()
-    order.submit()</code></pre>
+<span class="text-green-400"># Create a purchase order</span>
+po = PurchaseOrder(
+    po_number=<span class="text-yellow-300">"PO-2026-001"</span>,
+    buyer_gln=<span class="text-yellow-300">"0012345000001"</span>,
+    seller_gln=<span class="text-yellow-300">"0098765000001"</span>
+)</code></pre>
       </div>
     </div>
   </div>
