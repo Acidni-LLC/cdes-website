@@ -5,73 +5,83 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="CDES-M - Medical Extension | Cannabis Data Exchange Standard">
   <!-- Hero Section -->
   <div class="bg-gradient-to-br from-blue-700 to-blue-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
       <div class="text-center">
         <div class="inline-flex items-center px-4 py-2 bg-blue-600 rounded-full text-sm font-medium mb-6">
           <span class="animate-pulse mr-2"></span> NEW: Medical Extension v1.0
         </div>
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">
-          CDES-M
-        </h1>
-        <p class="text-2xl md:text-3xl text-blue-100 mb-4">
-          Medical Extension
-        </p>
-        <p class="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
-          Bridging cannabis data to healthcare systems. FHIR R4, ICD-10-CM, SNOMED CT, 
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">CDES-M</h1>
+        <p class="text-xl sm:text-2xl md:text-3xl text-blue-100 mb-4">Medical Extension</p>
+        <p class="text-base sm:text-xl text-blue-200 max-w-3xl mx-auto mb-8">
+          Bridging cannabis data to healthcare systems. FHIR R4, ICD-10-CM, SNOMED CT,
           NPI, and LOINC integration for medical marijuana programs.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/cdes-m/presentation" class="px-8 py-4 bg-white text-blue-700 rounded-lg font-semibold text-lg hover:bg-blue-50 transition">
-            View Presentation
-          </a>
-          <a href="https://github.com/Acidni-LLC/cdes-m-spec" class="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-700 transition">
-            Specification
-          </a>
-          <a href="https://pypi.org/project/cdes-m/" class="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-700 transition">
-            Python SDK
-          </a>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <a href="/cdes-m/presentation" class="px-6 sm:px-8 py-3 sm:py-4 bg-white text-blue-700 rounded-lg font-semibold text-base sm:text-lg hover:bg-blue-50 transition">View Presentation</a>
+          <a href="https://github.com/Acidni-LLC/cdes-m-spec" class="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-blue-700 transition">Specification</a>
+          <a href="https://pypi.org/project/cdes-m/" class="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-blue-700 transition">Python SDK</a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Bridge Concept -->
-  <div class="bg-gray-50 py-16">
+  <div class="bg-gray-50 py-12 sm:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">CDES-M is a Bridge</h2>
-      <p class="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-12">
-        CDES-M doesn't replace healthcare standardsit bridges CDES cannabis data INTO them.
+      <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">CDES-M is a Bridge</h2>
+      <p class="text-lg sm:text-xl text-gray-600 text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+        CDES-M doesn't replace healthcare standards - it bridges CDES cannabis data INTO them.
       </p>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-        <div class="bg-green-100 p-8 rounded-xl text-center w-64">
-          <div class="text-4xl mb-4"></div>
+      
+      <!-- Mobile: Vertical stack -->
+      <div class="flex flex-col items-center gap-4 md:hidden">
+        <div class="bg-green-100 p-6 rounded-xl text-center w-full max-w-xs">
+          <h3 class="text-lg font-bold text-green-800">CDES</h3>
+          <p class="text-green-700 text-sm mb-2">Cannabis Data</p>
+          <p class="text-sm text-green-700">Strains, Terpenes, COAs, Products</p>
+        </div>
+        <div class="text-3xl text-blue-600"></div>
+        <div class="bg-blue-100 p-6 rounded-xl text-center w-full max-w-xs">
+          <h3 class="text-lg font-bold text-blue-800">CDES-M</h3>
+          <p class="text-blue-700 text-sm mb-2">Medical Bridge</p>
+          <p class="text-sm text-blue-700">Provider, Patient, Recommendation</p>
+        </div>
+        <div class="text-3xl text-blue-600"></div>
+        <div class="bg-purple-100 p-6 rounded-xl text-center w-full max-w-xs">
+          <h3 class="text-lg font-bold text-purple-800">Healthcare</h3>
+          <p class="text-purple-700 text-sm mb-2">Existing Standards</p>
+          <p class="text-sm text-purple-700">FHIR R4, ICD-10, SNOMED, NPI</p>
+        </div>
+      </div>
+      
+      <!-- Desktop: Horizontal -->
+      <div class="hidden md:flex flex-row items-center justify-center gap-6 lg:gap-8">
+        <div class="bg-green-100 p-6 lg:p-8 rounded-xl text-center w-56 lg:w-64">
           <h3 class="text-xl font-bold text-green-800">CDES</h3>
           <p class="text-green-700 text-sm">Cannabis Data</p>
-          <ul class="text-left text-sm text-green-700 mt-4">
+          <ul class="text-left text-sm text-green-700 mt-4 space-y-1">
             <li> Strains</li>
             <li> Terpene Profiles</li>
             <li> COA Results</li>
             <li> Products</li>
           </ul>
         </div>
-        <div class="text-6xl text-blue-600"></div>
-        <div class="bg-blue-100 p-8 rounded-xl text-center w-64">
-          <div class="text-4xl mb-4"></div>
+        <div class="text-4xl lg:text-6xl text-blue-600"></div>
+        <div class="bg-blue-100 p-6 lg:p-8 rounded-xl text-center w-56 lg:w-64">
           <h3 class="text-xl font-bold text-blue-800">CDES-M</h3>
           <p class="text-blue-700 text-sm">Medical Bridge</p>
-          <ul class="text-left text-sm text-blue-700 mt-4">
+          <ul class="text-left text-sm text-blue-700 mt-4 space-y-1">
             <li> Provider  Practitioner</li>
             <li> Patient  Patient</li>
             <li> Recommendation  MedicationRequest</li>
             <li> Efficacy  Observation</li>
           </ul>
         </div>
-        <div class="text-6xl text-blue-600"></div>
-        <div class="bg-purple-100 p-8 rounded-xl text-center w-64">
-          <div class="text-4xl mb-4"></div>
+        <div class="text-4xl lg:text-6xl text-blue-600"></div>
+        <div class="bg-purple-100 p-6 lg:p-8 rounded-xl text-center w-56 lg:w-64">
           <h3 class="text-xl font-bold text-purple-800">Healthcare</h3>
           <p class="text-purple-700 text-sm">Existing Standards</p>
-          <ul class="text-left text-sm text-purple-700 mt-4">
+          <ul class="text-left text-sm text-purple-700 mt-4 space-y-1">
             <li> FHIR R4</li>
             <li> ICD-10-CM</li>
             <li> SNOMED CT</li>
@@ -83,159 +93,132 @@ import Layout from '../layouts/Layout.astro';
   </div>
 
   <!-- Standards Integration -->
-  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Healthcare Standards Integration</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
-        <div class="text-3xl mb-4"></div>
-        <h3 class="text-xl font-semibold mb-2">HL7 FHIR R4</h3>
-        <p class="text-gray-600 text-sm mb-4">Full resource mapping for Practitioner, Patient, Condition, MedicationRequest, and Observation.</p>
+  <div class="max-w-7xl mx-auto px-4 py-12 sm:py-16 sm:px-6 lg:px-8">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">Healthcare Standards Integration</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <div class="border border-gray-200 rounded-lg p-5 sm:p-6 hover:shadow-lg transition">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">HL7 FHIR R4</h3>
+        <p class="text-gray-600 text-sm mb-4">Full resource mapping for Practitioner, Patient, Condition, MedicationRequest.</p>
         <code class="text-xs bg-gray-100 px-2 py-1 rounded">provider_to_practitioner()</code>
       </div>
-      <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
-        <div class="text-3xl mb-4"></div>
-        <h3 class="text-xl font-semibold mb-2">ICD-10-CM</h3>
-        <p class="text-gray-600 text-sm mb-4">Diagnosis coding for qualifying conditions. Chronic pain (G89.29), PTSD (F43.10), Cancer (C00-C97).</p>
+      <div class="border border-gray-200 rounded-lg p-5 sm:p-6 hover:shadow-lg transition">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">ICD-10-CM</h3>
+        <p class="text-gray-600 text-sm mb-4">Diagnosis coding for qualifying conditions. Chronic pain, PTSD, Cancer.</p>
         <code class="text-xs bg-gray-100 px-2 py-1 rounded">Condition.icd10_code</code>
       </div>
-      <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
-        <div class="text-3xl mb-4"></div>
-        <h3 class="text-xl font-semibold mb-2">SNOMED CT</h3>
-        <p class="text-gray-600 text-sm mb-4">Clinical terminology for precise condition descriptions and clinical concepts.</p>
+      <div class="border border-gray-200 rounded-lg p-5 sm:p-6 hover:shadow-lg transition">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">SNOMED CT</h3>
+        <p class="text-gray-600 text-sm mb-4">Clinical terminology for precise condition descriptions.</p>
         <code class="text-xs bg-gray-100 px-2 py-1 rounded">Condition.snomed_code</code>
       </div>
-      <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
-        <div class="text-3xl mb-4"></div>
-        <h3 class="text-xl font-semibold mb-2">NPI</h3>
+      <div class="border border-gray-200 rounded-lg p-5 sm:p-6 hover:shadow-lg transition">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">NPI</h3>
         <p class="text-gray-600 text-sm mb-4">National Provider Identifier for all licensed healthcare providers.</p>
         <code class="text-xs bg-gray-100 px-2 py-1 rounded">Provider.npi</code>
       </div>
-      <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
-        <div class="text-3xl mb-4"></div>
-        <h3 class="text-xl font-semibold mb-2">LOINC</h3>
-        <p class="text-gray-600 text-sm mb-4">Lab observation codes for patient-reported outcomes and efficacy tracking.</p>
+      <div class="border border-gray-200 rounded-lg p-5 sm:p-6 hover:shadow-lg transition">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">LOINC</h3>
+        <p class="text-gray-600 text-sm mb-4">Lab observation codes for patient-reported outcomes.</p>
         <code class="text-xs bg-gray-100 px-2 py-1 rounded">77580-4 (PRO)</code>
       </div>
-      <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
-        <div class="text-3xl mb-4"></div>
-        <h3 class="text-xl font-semibold mb-2">Consumer Health</h3>
-        <p class="text-gray-600 text-sm mb-4">Apple HealthKit and Google Health Connect integration roadmap.</p>
+      <div class="border border-gray-200 rounded-lg p-5 sm:p-6 hover:shadow-lg transition">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">Consumer Health</h3>
+        <p class="text-gray-600 text-sm mb-4">Apple HealthKit and Google Health Connect integration.</p>
         <code class="text-xs bg-gray-100 px-2 py-1 rounded">v1.2 Planned</code>
       </div>
     </div>
   </div>
 
   <!-- Core Entities -->
-  <div class="bg-gray-50 py-16">
+  <div class="bg-gray-50 py-12 sm:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Core Entities</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">Core Entities</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="bg-white p-5 sm:p-6 rounded-lg shadow">
           <h3 class="text-lg font-semibold text-blue-700 mb-2">Provider</h3>
-          <p class="text-gray-600 text-sm">Licensed healthcare provider with NPI, state license, DEA number, and MMJ certification.</p>
+          <p class="text-gray-600 text-sm">Licensed healthcare provider with NPI, state license, DEA number.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
+        <div class="bg-white p-5 sm:p-6 rounded-lg shadow">
           <h3 class="text-lg font-semibold text-blue-700 mb-2">Patient</h3>
-          <p class="text-gray-600 text-sm">HIPAA-protected patient with conditions, cannabis history, terpene fingerprint, and consent.</p>
+          <p class="text-gray-600 text-sm">HIPAA-protected patient with conditions and terpene fingerprint.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
+        <div class="bg-white p-5 sm:p-6 rounded-lg shadow">
           <h3 class="text-lg font-semibold text-blue-700 mb-2">Recommendation</h3>
-          <p class="text-gray-600 text-sm">Provider recommendation with target terpene/cannabinoid profile and dosing guidance.</p>
+          <p class="text-gray-600 text-sm">Provider recommendation with target profile and dosing guidance.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
+        <div class="bg-white p-5 sm:p-6 rounded-lg shadow">
           <h3 class="text-lg font-semibold text-blue-700 mb-2">EfficacyReport</h3>
-          <p class="text-gray-600 text-sm">Patient-reported outcomes tracking treatment effectiveness over time.</p>
+          <p class="text-gray-600 text-sm">Patient-reported outcomes tracking treatment effectiveness.</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Quick Start -->
-  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Quick Start</h2>
+  <div class="max-w-7xl mx-auto px-4 py-12 sm:py-16 sm:px-6 lg:px-8">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-6 sm:mb-8">Quick Start</h2>
     <div class="max-w-3xl mx-auto">
-      <div class="bg-gray-900 rounded-lg p-6 text-white font-mono text-sm overflow-x-auto">
-        <div class="text-green-400 mb-4"># Install the SDK</div>
+      <div class="bg-gray-900 rounded-lg p-4 sm:p-6 text-white font-mono text-xs sm:text-sm overflow-x-auto">
+        <div class="text-green-400 mb-2"># Install the SDK</div>
         <div class="mb-4">pip install cdes-m</div>
-        <div class="text-green-400 mb-4"># Create a provider</div>
+        <div class="text-green-400 mb-2"># Create a provider</div>
         <div class="text-gray-300">
-          <span class="text-purple-400">from</span> cdes_m <span class="text-purple-400">import</span> Provider, ProviderLicenseType<br>
-          <span class="text-purple-400">from</span> datetime <span class="text-purple-400">import</span> date, datetime<br><br>
-          provider = Provider(<br>
-          &nbsp;&nbsp;npi=<span class="text-yellow-300">"1234567890"</span>,<br>
-          &nbsp;&nbsp;license_number=<span class="text-yellow-300">"ME123456"</span>,<br>
-          &nbsp;&nbsp;license_state=<span class="text-yellow-300">"FL"</span>,<br>
-          &nbsp;&nbsp;license_type=ProviderLicenseType.MD,<br>
-          &nbsp;&nbsp;license_expiration=date(<span class="text-blue-300">2026</span>, <span class="text-blue-300">12</span>, <span class="text-blue-300">31</span>),<br>
-          &nbsp;&nbsp;specialty=[<span class="text-yellow-300">"Pulmonology"</span>],<br>
-          &nbsp;&nbsp;tos_accepted=datetime.utcnow(),<br>
-          &nbsp;&nbsp;baa_signed=datetime.utcnow()<br>
-          )
+          from cdes_m import Provider<br>
+          provider = Provider(npi="1234567890", license_state="FL")
         </div>
-        <div class="text-green-400 mt-6 mb-4"># Convert to FHIR Practitioner</div>
+        <div class="text-green-400 mt-4 mb-2"># Convert to FHIR</div>
         <div class="text-gray-300">
-          <span class="text-purple-400">from</span> cdes_m.fhir <span class="text-purple-400">import</span> provider_to_practitioner<br><br>
-          practitioner = provider_to_practitioner(provider)<br>
-          <span class="text-purple-400">print</span>(practitioner.json(indent=<span class="text-blue-300">2</span>))
+          from cdes_m.fhir import provider_to_practitioner<br>
+          practitioner = provider_to_practitioner(provider)
         </div>
       </div>
     </div>
   </div>
 
   <!-- Working Groups -->
-  <div class="bg-blue-50 py-16">
+  <div class="bg-blue-50 py-12 sm:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Working Groups & Meetings</h2>
-      <p class="text-xl text-gray-600 text-center max-w-2xl mx-auto mb-12">
-        Join our community meetings to shape the future of medical cannabis data standards.
+      <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">Working Groups</h2>
+      <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-8">
+        Join our community meetings to shape medical cannabis data standards.
       </p>
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-lg font-semibold text-blue-700 mb-2"> Technical Working Group</h3>
-          <p class="text-gray-600 text-sm mb-4">Schema development, FHIR mapping, SDK roadmap</p>
-          <p class="font-medium">Tuesdays @ 3:00 PM ET</p>
-          <p class="text-sm text-gray-500">Bi-weekly starting Jan 21, 2026</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h3 class="font-semibold text-blue-700 mb-2">Technical Working Group</h3>
+          <p class="text-gray-600 text-sm mb-2">Schema development, FHIR mapping</p>
+          <p class="font-medium text-sm">Tuesdays @ 3:00 PM ET</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-lg font-semibold text-blue-700 mb-2"> Medical Advisory Board</h3>
-          <p class="text-gray-600 text-sm mb-4">Clinical protocols, evidence review, medical guidance</p>
-          <p class="font-medium">2nd Tuesday @ 12:00 PM ET</p>
-          <p class="text-sm text-gray-500">Monthly</p>
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h3 class="font-semibold text-blue-700 mb-2">Medical Advisory Board</h3>
+          <p class="text-gray-600 text-sm mb-2">Clinical protocols, evidence review</p>
+          <p class="font-medium text-sm">2nd Tuesday @ 12:00 PM ET</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-lg font-semibold text-blue-700 mb-2"> Payer/Provider Forum</h3>
-          <p class="text-gray-600 text-sm mb-4">Insurance integration, reimbursement, enterprise adoption</p>
-          <p class="font-medium">3rd Thursday @ 2:00 PM ET</p>
-          <p class="text-sm text-gray-500">Inaugural: Jan 16, 2026</p>
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h3 class="font-semibold text-blue-700 mb-2">Payer/Provider Forum</h3>
+          <p class="text-gray-600 text-sm mb-2">Insurance integration, reimbursement</p>
+          <p class="font-medium text-sm">3rd Thursday @ 2:00 PM ET</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-lg font-semibold text-blue-700 mb-2"> Compliance Working Group</h3>
-          <p class="text-gray-600 text-sm mb-4">HIPAA, state regulations, audit requirements</p>
-          <p class="font-medium">1st & 3rd Wednesday @ 1:00 PM ET</p>
-          <p class="text-sm text-gray-500">Bi-weekly</p>
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h3 class="font-semibold text-blue-700 mb-2">Compliance Working Group</h3>
+          <p class="text-gray-600 text-sm mb-2">HIPAA, state regulations</p>
+          <p class="font-medium text-sm">1st & 3rd Wednesday @ 1:00 PM ET</p>
         </div>
       </div>
       <div class="text-center mt-8">
-        <a href="mailto:cdes@acidni.net" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
-          Request Meeting Invite
-        </a>
+        <a href="mailto:cdes@acidni.net" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">Request Invite</a>
       </div>
     </div>
   </div>
 
   <!-- CTA -->
-  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to integrate?</h2>
-    <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+  <div class="max-w-7xl mx-auto px-4 py-12 sm:py-16 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Ready to integrate?</h2>
+    <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
       Contact us for enterprise licensing, implementation support, or to join a working group.
     </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="mailto:cdes@acidni.net" class="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold text-lg hover:bg-blue-700 transition">
-        Contact Us
-      </a>
-      <a href="/cdes-m/presentation" class="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold text-lg hover:bg-blue-50 transition">
-        View Full Presentation
-      </a>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="mailto:cdes@acidni.net" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">Contact Us</a>
+      <a href="/cdes-m/presentation" class="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">View Presentation</a>
     </div>
   </div>
 </Layout>
