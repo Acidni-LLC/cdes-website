@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -10,16 +10,32 @@ import Layout from '../layouts/Layout.astro';
     <section class="mb-12">
       <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
         <span class="w-8 h-8 bg-cdes-green-600 text-white rounded-full flex items-center justify-center text-sm mr-3">1</span>
-        Choose Your Integration Path
+        Choose Your Packages
       </h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="border rounded-lg p-6 hover:border-cdes-green-500 transition">
-          <h3 class="font-semibold text-lg mb-2">Python SDK</h3>
+          <h3 class="font-semibold text-lg mb-2">Core Package</h3>
           <a href="https://pypi.org/project/cdes/" target="_blank" class="inline-block mb-2">
-            <img src="https://img.shields.io/pypi/v/cdes?color=green&label=PyPI" alt="PyPI version" />
+            <img src="https://img.shields.io/pypi/v/cdes?color=green&label=cdes" alt="PyPI version" />
           </a>
-          <p class="text-gray-600 mb-4">Best for data pipelines, APIs, and backend services.</p>
+          <p class="text-gray-600 mb-4">Strains, terpenes, cannabinoids, and COA validation.</p>
           <code class="bg-gray-100 px-3 py-1 rounded text-sm">pip install cdes</code>
+        </div>
+        <div class="border rounded-lg p-6 hover:border-cdes-green-500 transition">
+          <h3 class="font-semibold text-lg mb-2">Medical Integration</h3>
+          <a href="https://pypi.org/project/cdes-m/" target="_blank" class="inline-block mb-2">
+            <img src="https://img.shields.io/pypi/v/cdes-m?color=blue&label=cdes-m" alt="PyPI version" />
+          </a>
+          <p class="text-gray-600 mb-4">FHIR R4, HL7, ICD-10 healthcare interoperability.</p>
+          <code class="bg-gray-100 px-3 py-1 rounded text-sm">pip install cdes-m</code>
+        </div>
+        <div class="border rounded-lg p-6 hover:border-cdes-green-500 transition">
+          <h3 class="font-semibold text-lg mb-2">GDPR Compliance</h3>
+          <a href="https://pypi.org/project/cdes-gdpr/" target="_blank" class="inline-block mb-2">
+            <img src="https://img.shields.io/pypi/v/cdes-gdpr?color=purple&label=cdes-gdpr" alt="PyPI version" />
+          </a>
+          <p class="text-gray-600 mb-4">Consent management, data subject rights, audit logs.</p>
+          <code class="bg-gray-100 px-3 py-1 rounded text-sm">pip install cdes-gdpr</code>
         </div>
         <div class="border rounded-lg p-6 hover:border-cdes-green-500 transition">
           <h3 class="font-semibold text-lg mb-2">JSON Schema</h3>
@@ -27,19 +43,27 @@ import Layout from '../layouts/Layout.astro';
           <a href="https://github.com/Acidni-LLC/cdes-spec" class="text-cdes-green-600 hover:underline">View Schemas</a>
         </div>
       </div>
+      <p class="mt-4 text-gray-500 text-sm">
+        <a href="/sdks" class="text-cdes-green-600 hover:underline">View all 6 packages </a>
+      </p>
     </section>
 
     <section class="mb-12">
       <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
         <span class="w-8 h-8 bg-cdes-green-600 text-white rounded-full flex items-center justify-center text-sm mr-3">2</span>
-        Install the SDK
+        Install the SDKs
       </h2>
       <div class="bg-gray-900 rounded-lg p-6">
-        <pre class="text-green-400 text-sm overflow-x-auto"># Using pip
-pip install cdes
+        <pre class="text-green-400 text-sm overflow-x-auto"># Install core packages
+pip install cdes cdes-m cdes-gdpr
 
-# Using poetry
-poetry add cdes</pre>
+# Or install individual packages
+pip install cdes          # Core cannabis data models
+pip install cdes-m        # Medical/healthcare integration
+pip install cdes-gdpr     # GDPR compliance
+pip install cdes-mk       # METRC/seed-to-sale
+pip install cdes-fs       # Food safety / COA
+pip install cdes-c        # Canadian compliance</pre>
       </div>
     </section>
 
@@ -76,6 +100,7 @@ print(myrcene.get("casNumber"))  # 123-35-3</pre>
     <section class="bg-cdes-green-50 rounded-lg p-8">
       <h2 class="text-2xl font-bold text-gray-900 mb-4">Next Steps</h2>
       <ul class="space-y-3">
+        <li><a href="/sdks" class="text-cdes-green-600 hover:underline">Browse All SDKs</a> - See all 6 Python packages with install instructions</li>
         <li><a href="/terpenes" class="text-cdes-green-600 hover:underline">Browse the Terpene Library</a> - See all 24+ official terpenes</li>
         <li><a href="/schemas" class="text-cdes-green-600 hover:underline">Explore the Schemas</a> - Full JSON Schema documentation</li>
         <li><a href="https://github.com/Acidni-LLC/cdes-sdk-python" class="text-cdes-green-600 hover:underline">Python SDK Reference</a> - Complete API documentation</li>

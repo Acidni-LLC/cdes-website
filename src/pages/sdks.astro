@@ -1,0 +1,183 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Python SDKs" description="CDES Python SDK packages for cannabis data integration">
+  <div class="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">CDES Python SDKs</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        A complete ecosystem of Python packages for cannabis data standardization, 
+        medical integration, and regulatory compliance.
+      </p>
+    </div>
+
+    <!-- Quick Install -->
+    <section class="mb-16">
+      <div class="bg-gray-900 rounded-xl p-8">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-semibold text-white">Quick Install - All Core Packages</h2>
+          <span class="text-gray-400 text-sm">pip</span>
+        </div>
+        <pre class="text-green-400 text-lg font-mono overflow-x-auto">pip install cdes cdes-m cdes-gdpr</pre>
+      </div>
+    </section>
+
+    <!-- Package Grid -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Available Packages</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- cdes -->
+        <div class="border rounded-xl p-6 hover:border-cdes-green-500 hover:shadow-lg transition">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-900">cdes</h3>
+            <span class="bg-cdes-green-100 text-cdes-green-700 px-3 py-1 rounded-full text-sm font-medium">v1.1.0</span>
+          </div>
+          <p class="text-gray-600 mb-4">Core cannabis data models. Strains, terpenes, cannabinoids, and COA validation.</p>
+          <div class="bg-gray-100 rounded-lg p-3 mb-4">
+            <code class="text-sm text-gray-800">pip install cdes</code>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://pypi.org/project/cdes/" target="_blank" class="text-cdes-green-600 hover:underline text-sm">PyPI</a>
+            <a href="https://github.com/Acidni-LLC/cdes-sdk-python" target="_blank" class="text-cdes-green-600 hover:underline text-sm">GitHub</a>
+          </div>
+        </div>
+
+        <!-- cdes-m -->
+        <div class="border rounded-xl p-6 hover:border-cdes-green-500 hover:shadow-lg transition">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-900">cdes-m</h3>
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">v1.0.0</span>
+          </div>
+          <p class="text-gray-600 mb-4">Medical cannabis data exchange. FHIR R4, HL7, ICD-10, and healthcare interoperability.</p>
+          <div class="bg-gray-100 rounded-lg p-3 mb-4">
+            <code class="text-sm text-gray-800">pip install cdes-m</code>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://pypi.org/project/cdes-m/" target="_blank" class="text-cdes-green-600 hover:underline text-sm">PyPI</a>
+            <a href="https://github.com/Acidni-LLC/cdes-m-sdk-python" target="_blank" class="text-cdes-green-600 hover:underline text-sm">GitHub</a>
+          </div>
+        </div>
+
+        <!-- cdes-gdpr -->
+        <div class="border rounded-xl p-6 hover:border-cdes-green-500 hover:shadow-lg transition">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-900">cdes-gdpr</h3>
+            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">v1.0.0</span>
+          </div>
+          <p class="text-gray-600 mb-4">GDPR compliance for cannabis data. Consent management, data subject rights, and audit logging.</p>
+          <div class="bg-gray-100 rounded-lg p-3 mb-4">
+            <code class="text-sm text-gray-800">pip install cdes-gdpr</code>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://pypi.org/project/cdes-gdpr/" target="_blank" class="text-cdes-green-600 hover:underline text-sm">PyPI</a>
+            <a href="https://github.com/Acidni-LLC/cdes-gdpr-sdk-python" target="_blank" class="text-cdes-green-600 hover:underline text-sm">GitHub</a>
+          </div>
+        </div>
+
+        <!-- cdes-mk -->
+        <div class="border rounded-xl p-6 hover:border-cdes-green-500 hover:shadow-lg transition">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-900">cdes-mk</h3>
+            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">v0.1.0</span>
+          </div>
+          <p class="text-gray-600 mb-4">METRC/BioTrack integration. Seed-to-sale compliance and regulatory reporting.</p>
+          <div class="bg-gray-100 rounded-lg p-3 mb-4">
+            <code class="text-sm text-gray-800">pip install cdes-mk</code>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://pypi.org/project/cdes-mk/" target="_blank" class="text-cdes-green-600 hover:underline text-sm">PyPI</a>
+            <a href="https://github.com/Acidni-LLC/cdes-mk-sdk-python" target="_blank" class="text-cdes-green-600 hover:underline text-sm">GitHub</a>
+          </div>
+        </div>
+
+        <!-- cdes-fs -->
+        <div class="border rounded-xl p-6 hover:border-cdes-green-500 hover:shadow-lg transition">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-900">cdes-fs</h3>
+            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">v0.1.0</span>
+          </div>
+          <p class="text-gray-600 mb-4">Food safety compliance. Certificate of Analysis (COA) and contaminant testing.</p>
+          <div class="bg-gray-100 rounded-lg p-3 mb-4">
+            <code class="text-sm text-gray-800">pip install cdes-fs</code>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://pypi.org/project/cdes-fs/" target="_blank" class="text-cdes-green-600 hover:underline text-sm">PyPI</a>
+            <a href="https://github.com/Acidni-LLC/cdes-fs-sdk-python" target="_blank" class="text-cdes-green-600 hover:underline text-sm">GitHub</a>
+          </div>
+        </div>
+
+        <!-- cdes-c -->
+        <div class="border rounded-xl p-6 hover:border-cdes-green-500 hover:shadow-lg transition">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-900">cdes-c</h3>
+            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">v0.1.0</span>
+          </div>
+          <p class="text-gray-600 mb-4">Canadian cannabis compliance. Health Canada regulations and provincial reporting.</p>
+          <div class="bg-gray-100 rounded-lg p-3 mb-4">
+            <code class="text-sm text-gray-800">pip install cdes-c</code>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://pypi.org/project/cdes-c/" target="_blank" class="text-cdes-green-600 hover:underline text-sm">PyPI</a>
+            <a href="https://github.com/Acidni-LLC/cdes-c-sdk-python" target="_blank" class="text-cdes-green-600 hover:underline text-sm">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Use Cases</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gradient-to-br from-cdes-green-50 to-white rounded-xl p-8 border border-cdes-green-100">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Healthcare Integration</h3>
+          <pre class="bg-gray-900 rounded-lg p-4 text-green-400 text-sm overflow-x-auto mb-4">from cdes_m import Patient, Recommendation
+from cdes_gdpr import ConsentManager
+
+# HIPAA/GDPR compliant patient data
+patient = Patient(mrn="12345")
+consent = ConsentManager()
+consent.record_consent(patient.id, "treatment")</pre>
+          <p class="text-gray-600 text-sm">Use <code class="bg-gray-100 px-1 rounded">cdes-m</code> + <code class="bg-gray-100 px-1 rounded">cdes-gdpr</code> for medical cannabis clinics.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 border border-blue-100">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Dispensary Software</h3>
+          <pre class="bg-gray-900 rounded-lg p-4 text-green-400 text-sm overflow-x-auto mb-4">from cdes import Strain, TerpeneProfile
+from cdes_mk import MetrcPackage
+
+# Validate strain data and sync to METRC
+strain = Strain(name="Blue Dream", type="hybrid")
+package = MetrcPackage.from_strain(strain)</pre>
+          <p class="text-gray-600 text-sm">Use <code class="bg-gray-100 px-1 rounded">cdes</code> + <code class="bg-gray-100 px-1 rounded">cdes-mk</code> for seed-to-sale tracking.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="bg-gray-50 rounded-xl p-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Requirements</h2>
+      <ul class="space-y-3 text-gray-600">
+        <li class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-cdes-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Python 3.9 or higher
+        </li>
+        <li class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-cdes-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          All packages available on <a href="https://pypi.org/search/?q=cdes" target="_blank" class="text-cdes-green-600 hover:underline">PyPI</a>
+        </li>
+        <li class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-cdes-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Apache 2.0 License - Open source
+        </li>
+      </ul>
+    </section>
+  </div>
+</Layout>

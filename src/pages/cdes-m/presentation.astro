@@ -283,15 +283,15 @@ import Layout from '../../layouts/Layout.astro';
             <span class="text-purple-400">from</span> cdes_m.fhir <span class="text-purple-400">import</span> recommendation_to_medication_request<br><br>
             
             rec = Recommendation(<br>
-            &nbsp;&nbsp;patient_id=patient.id,<br>
-            &nbsp;&nbsp;provider_id=provider.id,<br>
-            &nbsp;&nbsp;target_profile=TargetProfile(<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;terpene_profile={<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-yellow-300">"myrcene"</span>: <span class="text-blue-300">0.8</span>,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-yellow-300">"caryophyllene"</span>: <span class="text-blue-300">0.5</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-            &nbsp;&nbsp;),<br>
-            &nbsp;&nbsp;rationale=<span class="text-yellow-300">"Anti-inflammatory profile for COPD"</span><br>
+            &#160;&#160;patient_id=patient.id,<br>
+            &#160;&#160;provider_id=provider.id,<br>
+            &#160;&#160;target_profile=TargetProfile(<br>
+            &#160;&#160;&#160;&#160;terpene_profile={<br>
+            &#160;&#160;&#160;&#160;&#160;&#160;<span class="text-yellow-300">"myrcene"</span>: <span class="text-blue-300">0.8</span>,<br>
+            &#160;&#160;&#160;&#160;&#160;&#160;<span class="text-yellow-300">"caryophyllene"</span>: <span class="text-blue-300">0.5</span><br>
+            &#160;&#160;&#160;&#160;}<br>
+            &#160;&#160;),<br>
+            &#160;&#160;rationale=<span class="text-yellow-300">"Anti-inflammatory profile for COPD"</span><br>
             )<br><br>
             
             <span class="text-green-400"># Convert to FHIR MedicationRequest</span><br>
@@ -433,3 +433,4 @@ import Layout from '../../layouts/Layout.astro';
     });
   </script>
 </Layout>
+
