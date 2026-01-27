@@ -1,0 +1,188 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CDES Approved Cannabinoid Library",
+  "description": "Official cannabinoid reference with colors - used by all CDES SDKs and visualizations",
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-25",
+  "license": "CC0-1.0",
+  "colorPalette": {
+    "description": "Colors based on effects and regulatory significance",
+    "accessibility": "WCAG 2.1 AA compliant",
+    "usage": "Use hex for CSS/web, rgb for programmatic manipulation"
+  },
+  "cannabinoids": [
+    {
+      "id": "cannabinoid:thc",
+      "name": "THC",
+      "fullName": "Delta-9-Tetrahydrocannabinol",
+      "alternateName": ["Δ9-THC", "d9-THC", "Delta-9 THC"],
+      "casNumber": "1972-08-3",
+      "pubchemId": "16078",
+      "molecularFormula": "C21H30O2",
+      "molecularWeight": 314.46,
+      "category": "major",
+      "psychoactive": true,
+      "effects": [
+        { "effect": "psychoactive", "strength": "strong", "evidence": "clinical" },
+        { "effect": "euphoria", "strength": "strong", "evidence": "clinical" },
+        { "effect": "pain-relief", "strength": "moderate", "evidence": "clinical" },
+        { "effect": "appetite-stimulation", "strength": "strong", "evidence": "clinical" }
+      ],
+      "threshold": { "medical": 0.3, "unit": "percent", "notes": "Florida medical threshold" },
+      "color": { "hex": "#E63946", "rgb": { "r": 230, "g": 57, "b": 70 } },
+      "colorRationale": "Red - psychoactive potency indicator, caution"
+    },
+    {
+      "id": "cannabinoid:thca",
+      "name": "THCA",
+      "fullName": "Tetrahydrocannabinolic Acid",
+      "alternateName": ["THCA-A"],
+      "casNumber": "23978-85-0",
+      "pubchemId": "98523",
+      "molecularFormula": "C22H30O4",
+      "molecularWeight": 358.47,
+      "category": "major",
+      "psychoactive": false,
+      "effects": [
+        { "effect": "anti-inflammatory", "strength": "strong", "evidence": "preliminary" },
+        { "effect": "neuroprotective", "strength": "moderate", "evidence": "preliminary" },
+        { "effect": "anti-nausea", "strength": "moderate", "evidence": "preliminary" }
+      ],
+      "notes": "Raw/unheated form. Converts to THC with heat (decarboxylation)",
+      "color": { "hex": "#F4A261", "rgb": { "r": 244, "g": 162, "b": 97 } },
+      "colorRationale": "Sandy orange - precursor to THC, warm but not hot"
+    },
+    {
+      "id": "cannabinoid:cbd",
+      "name": "CBD",
+      "fullName": "Cannabidiol",
+      "casNumber": "13956-29-1",
+      "pubchemId": "644019",
+      "molecularFormula": "C21H30O2",
+      "molecularWeight": 314.46,
+      "category": "major",
+      "psychoactive": false,
+      "effects": [
+        { "effect": "anti-anxiety", "strength": "strong", "evidence": "clinical" },
+        { "effect": "anti-inflammatory", "strength": "strong", "evidence": "clinical" },
+        { "effect": "anti-seizure", "strength": "strong", "evidence": "clinical" },
+        { "effect": "pain-relief", "strength": "moderate", "evidence": "clinical" }
+      ],
+      "color": { "hex": "#2A9D8F", "rgb": { "r": 42, "g": 157, "b": 143 } },
+      "colorRationale": "Teal - calming, therapeutic, wellness"
+    },
+    {
+      "id": "cannabinoid:cbda",
+      "name": "CBDA",
+      "fullName": "Cannabidiolic Acid",
+      "casNumber": "1244-58-2",
+      "pubchemId": "160570",
+      "molecularFormula": "C22H30O4",
+      "molecularWeight": 358.47,
+      "category": "major",
+      "psychoactive": false,
+      "effects": [
+        { "effect": "anti-nausea", "strength": "strong", "evidence": "preliminary" },
+        { "effect": "anti-inflammatory", "strength": "moderate", "evidence": "preliminary" }
+      ],
+      "notes": "Raw/unheated form. Converts to CBD with heat",
+      "color": { "hex": "#8ECAE6", "rgb": { "r": 142, "g": 202, "b": 230 } },
+      "colorRationale": "Sky blue - lighter precursor to CBD"
+    },
+    {
+      "id": "cannabinoid:cbg",
+      "name": "CBG",
+      "fullName": "Cannabigerol",
+      "casNumber": "25654-31-3",
+      "pubchemId": "5315659",
+      "molecularFormula": "C21H32O2",
+      "molecularWeight": 316.48,
+      "category": "minor",
+      "psychoactive": false,
+      "effects": [
+        { "effect": "anti-bacterial", "strength": "strong", "evidence": "preliminary" },
+        { "effect": "anti-inflammatory", "strength": "moderate", "evidence": "preliminary" },
+        { "effect": "neuroprotective", "strength": "weak", "evidence": "preliminary" }
+      ],
+      "notes": "The 'mother' or 'stem cell' cannabinoid - precursor to THC and CBD",
+      "color": { "hex": "#E9C46A", "rgb": { "r": 233, "g": 196, "b": 106 } },
+      "colorRationale": "Gold - foundational, valuable parent compound"
+    },
+    {
+      "id": "cannabinoid:cbn",
+      "name": "CBN",
+      "fullName": "Cannabinol",
+      "casNumber": "521-35-7",
+      "pubchemId": "2543",
+      "molecularFormula": "C21H26O2",
+      "molecularWeight": 310.43,
+      "category": "minor",
+      "psychoactive": false,
+      "effects": [
+        { "effect": "sedating", "strength": "moderate", "evidence": "anecdotal" },
+        { "effect": "appetite-stimulation", "strength": "weak", "evidence": "preliminary" }
+      ],
+      "notes": "Degradation product of THC. Increases with age/oxidation",
+      "color": { "hex": "#6A4C93", "rgb": { "r": 106, "g": 76, "b": 147 } },
+      "colorRationale": "Purple - sedating, nighttime, aged compound"
+    },
+    {
+      "id": "cannabinoid:cbc",
+      "name": "CBC",
+      "fullName": "Cannabichromene",
+      "casNumber": "20675-51-8",
+      "pubchemId": "30219",
+      "molecularFormula": "C21H30O2",
+      "molecularWeight": 314.46,
+      "category": "minor",
+      "psychoactive": false,
+      "effects": [
+        { "effect": "anti-inflammatory", "strength": "moderate", "evidence": "preliminary" },
+        { "effect": "anti-depressant", "strength": "weak", "evidence": "preliminary" },
+        { "effect": "neurogenesis", "strength": "weak", "evidence": "preliminary" }
+      ],
+      "notes": "Third most abundant cannabinoid in some strains",
+      "color": { "hex": "#457B9D", "rgb": { "r": 69, "g": 123, "b": 157 } },
+      "colorRationale": "Steel blue - stable, supportive compound"
+    },
+    {
+      "id": "cannabinoid:thcv",
+      "name": "THCV",
+      "fullName": "Tetrahydrocannabivarin",
+      "casNumber": "31262-37-0",
+      "pubchemId": "93147",
+      "molecularFormula": "C19H26O2",
+      "molecularWeight": 286.41,
+      "category": "minor",
+      "psychoactive": true,
+      "effects": [
+        { "effect": "appetite-suppression", "strength": "moderate", "evidence": "preliminary" },
+        { "effect": "energizing", "strength": "moderate", "evidence": "anecdotal" },
+        { "effect": "anti-anxiety", "strength": "weak", "evidence": "preliminary" }
+      ],
+      "notes": "Shorter carbon chain variant of THC. Often called 'diet weed'",
+      "color": { "hex": "#FF6B6B", "rgb": { "r": 255, "g": 107, "b": 107 } },
+      "colorRationale": "Coral - energizing, lighter psychoactive"
+    },
+    {
+      "id": "cannabinoid:delta8",
+      "name": "Delta-8 THC",
+      "fullName": "Delta-8-Tetrahydrocannabinol",
+      "alternateName": ["Δ8-THC", "d8-THC", "Delta-8"],
+      "casNumber": "5957-75-5",
+      "pubchemId": "2977",
+      "molecularFormula": "C21H30O2",
+      "molecularWeight": 314.46,
+      "category": "minor",
+      "psychoactive": true,
+      "effects": [
+        { "effect": "psychoactive", "strength": "moderate", "evidence": "anecdotal" },
+        { "effect": "anti-nausea", "strength": "moderate", "evidence": "preliminary" },
+        { "effect": "appetite-stimulation", "strength": "moderate", "evidence": "preliminary" }
+      ],
+      "notes": "Double bond at 8th carbon. ~50-75% potency of Delta-9 THC",
+      "color": { "hex": "#D62828", "rgb": { "r": 214, "g": 40, "b": 40 } },
+      "colorRationale": "Crimson - psychoactive but distinct from Delta-9"
+    }
+  ]
+}

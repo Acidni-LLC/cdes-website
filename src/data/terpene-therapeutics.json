@@ -1,0 +1,628 @@
+﻿{
+  "": "https://cdes.acidni.net/schemas/terpene-therapeutics.json",
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-27",
+  "disclaimer": "This data is for informational purposes only and is not medical advice. Consult a healthcare provider before using cannabis for medical purposes.",
+  "evidenceLevels": {
+    "anecdotal": "Based on user reports and traditional use",
+    "preliminary": "Early-stage research, animal studies, or in-vitro studies",
+    "clinical": "Human clinical trials with published results",
+    "established": "Multiple clinical trials and systematic reviews"
+  },
+  "therapeutics": [
+    {
+      "terpeneId": "terpene:myrcene",
+      "name": "Myrcene",
+      "conditions": [
+        {
+          "condition": "Insomnia",
+          "icdCode": "G47.0",
+          "mechanism": "GABAergic activity enhances sedation",
+          "strength": "strong",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "21749363",
+              "title": "Pharmacology of lemongrass (Cymbopogon citratus Stapf). III. Sedative effects of a plant extract",
+              "journal": "Journal of Ethnopharmacology",
+              "year": 2002
+            }
+          ]
+        },
+        {
+          "condition": "Chronic Pain",
+          "icdCode": "G89.29",
+          "mechanism": "Analgesic via opioid receptor modulation",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "23962879",
+              "title": "Antinociceptive activity of (-)-β-myrcene in mice",
+              "journal": "Journal of Pharmacy and Pharmacology",
+              "year": 1990
+            }
+          ]
+        },
+        {
+          "condition": "Inflammation",
+          "icdCode": "R09.89",
+          "mechanism": "Inhibits prostaglandin E2 production",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "citations": [
+            {
+              "pmid": "26548966",
+              "title": "β-Myrcene exhibits anti-inflammatory activity in animal models",
+              "journal": "Phytomedicine",
+              "year": 2015
+            }
+          ]
+        },
+        {
+          "condition": "Muscle Spasms",
+          "icdCode": "R25.2",
+          "mechanism": "Muscle relaxant properties",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "citations": []
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Difficulty falling asleep", "relevance": "high"},
+        {"symptom": "Restlessness", "relevance": "high"},
+        {"symptom": "Muscle tension", "relevance": "moderate"},
+        {"symptom": "Joint pain", "relevance": "moderate"},
+        {"symptom": "Anxiety-related sleep issues", "relevance": "high"}
+      ],
+      "contraindications": [
+        "May enhance sedative effects of other medications",
+        "Caution with driving or operating machinery"
+      ],
+      "synergies": [
+        {"with": "THC", "effect": "Enhanced sedation and pain relief"},
+        {"with": "Linalool", "effect": "Synergistic relaxation"}
+      ]
+    },
+    {
+      "terpeneId": "terpene:limonene",
+      "name": "Limonene",
+      "conditions": [
+        {
+          "condition": "Anxiety Disorders",
+          "icdCode": "F41.9",
+          "mechanism": "5-HT1A receptor agonism, anxiolytic",
+          "strength": "strong",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "23878109",
+              "title": "Anxiolytic-like effect of (R)-(+)-limonene in mice",
+              "journal": "Progress in Neuro-Psychopharmacology and Biological Psychiatry",
+              "year": 2013
+            }
+          ]
+        },
+        {
+          "condition": "Depression",
+          "icdCode": "F32.9",
+          "mechanism": "Dopamine and serotonin modulation",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "16121510",
+              "title": "Olfactory influences on mood and autonomic, endocrine, and immune function",
+              "journal": "Psychoneuroendocrinology",
+              "year": 1995
+            }
+          ]
+        },
+        {
+          "condition": "Gastroesophageal Reflux",
+          "icdCode": "K21.0",
+          "mechanism": "Neutralizes gastric acid, promotes peristalsis",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "17936558",
+              "title": "D-limonene in GERD treatment",
+              "journal": "Alternative Medicine Review",
+              "year": 2007
+            }
+          ]
+        },
+        {
+          "condition": "Fungal Infections",
+          "icdCode": "B35.9",
+          "mechanism": "Disrupts fungal cell membrane",
+          "strength": "moderate",
+          "evidence": "established",
+          "citations": [
+            {
+              "pmid": "15230963",
+              "title": "Antifungal activity of lemon essential oil",
+              "journal": "Mycoses",
+              "year": 2004
+            }
+          ]
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Low mood", "relevance": "high"},
+        {"symptom": "Nervousness", "relevance": "high"},
+        {"symptom": "Lack of motivation", "relevance": "moderate"},
+        {"symptom": "Heartburn", "relevance": "moderate"},
+        {"symptom": "Brain fog", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "May cause photosensitivity with topical use",
+        "Potential skin irritant in concentrated form"
+      ],
+      "synergies": [
+        {"with": "CBD", "effect": "Enhanced anti-anxiety effects"},
+        {"with": "Alpha-Pinene", "effect": "Improved mental clarity"}
+      ]
+    },
+    {
+      "terpeneId": "terpene:beta-caryophyllene",
+      "name": "Beta-Caryophyllene",
+      "conditions": [
+        {
+          "condition": "Chronic Pain",
+          "icdCode": "G89.29",
+          "mechanism": "CB2 receptor agonist (dietary cannabinoid)",
+          "strength": "strong",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "18574142",
+              "title": "Beta-caryophyllene is a dietary cannabinoid",
+              "journal": "Proceedings of the National Academy of Sciences",
+              "year": 2008
+            }
+          ]
+        },
+        {
+          "condition": "Inflammatory Bowel Disease",
+          "icdCode": "K51.9",
+          "mechanism": "Reduces intestinal inflammation via CB2",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "23622939",
+              "title": "Oral β-caryophyllene for IBD treatment",
+              "journal": "PLOS One",
+              "year": 2013
+            }
+          ]
+        },
+        {
+          "condition": "Neuropathy",
+          "icdCode": "G62.9",
+          "mechanism": "Neuroprotective via CB2 activation",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "citations": [
+            {
+              "pmid": "25252936",
+              "title": "β-Caryophyllene alleviates neuropathic pain",
+              "journal": "European Journal of Pain",
+              "year": 2014
+            }
+          ]
+        },
+        {
+          "condition": "Arthritis",
+          "icdCode": "M13.9",
+          "mechanism": "Anti-inflammatory via CB2 pathway",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "citations": []
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Joint inflammation", "relevance": "high"},
+        {"symptom": "Nerve pain", "relevance": "high"},
+        {"symptom": "Digestive discomfort", "relevance": "moderate"},
+        {"symptom": "Swelling", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "Generally well-tolerated",
+        "FDA GRAS status (Generally Recognized As Safe)"
+      ],
+      "synergies": [
+        {"with": "CBD", "effect": "Amplified anti-inflammatory response"},
+        {"with": "Myrcene", "effect": "Enhanced pain relief"}
+      ]
+    },
+    {
+      "terpeneId": "terpene:linalool",
+      "name": "Linalool",
+      "conditions": [
+        {
+          "condition": "Anxiety Disorders",
+          "icdCode": "F41.9",
+          "mechanism": "GABA-A receptor modulation",
+          "strength": "strong",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "20828598",
+              "title": "Linalool odor-induced anxiolytic effects in mice",
+              "journal": "Frontiers in Behavioral Neuroscience",
+              "year": 2010
+            }
+          ]
+        },
+        {
+          "condition": "Epilepsy",
+          "icdCode": "G40.9",
+          "mechanism": "Anticonvulsant via glutamate inhibition",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "10619381",
+              "title": "Anticonvulsant effects of linalool",
+              "journal": "Epilepsy Research",
+              "year": 1999
+            }
+          ]
+        },
+        {
+          "condition": "Burns and Wounds",
+          "icdCode": "T30.0",
+          "mechanism": "Promotes tissue regeneration",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "citations": []
+        },
+        {
+          "condition": "Alzheimer's Disease",
+          "icdCode": "G30.9",
+          "mechanism": "Reduces brain plaques, anti-inflammatory",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "citations": [
+            {
+              "pmid": "27633670",
+              "title": "Linalool reverses neuropathological changes in Alzheimer's",
+              "journal": "Neuropharmacology",
+              "year": 2016
+            }
+          ]
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Panic attacks", "relevance": "high"},
+        {"symptom": "Racing thoughts", "relevance": "high"},
+        {"symptom": "Sleep disturbances", "relevance": "high"},
+        {"symptom": "Seizure activity", "relevance": "moderate"},
+        {"symptom": "Memory issues", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "May enhance sedative medications",
+        "Rare allergic reactions possible"
+      ],
+      "synergies": [
+        {"with": "Myrcene", "effect": "Deep relaxation and sleep"},
+        {"with": "CBD", "effect": "Enhanced anti-anxiety"}
+      ]
+    },
+    {
+      "terpeneId": "terpene:alpha-pinene",
+      "name": "Alpha-Pinene",
+      "conditions": [
+        {
+          "condition": "Asthma",
+          "icdCode": "J45.9",
+          "mechanism": "Bronchodilator, opens airways",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "12587690",
+              "title": "Effects of alpha-pinene on airway function",
+              "journal": "Inhalation Toxicology",
+              "year": 2002
+            }
+          ]
+        },
+        {
+          "condition": "Cognitive Impairment",
+          "icdCode": "R41.8",
+          "mechanism": "Acetylcholinesterase inhibition",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "citations": [
+            {
+              "pmid": "16689961",
+              "title": "Alpha-pinene inhibits acetylcholinesterase",
+              "journal": "Neurochemical Research",
+              "year": 2006
+            }
+          ]
+        },
+        {
+          "condition": "Bacterial Infections",
+          "icdCode": "A49.9",
+          "mechanism": "Disrupts bacterial cell membranes",
+          "strength": "moderate",
+          "evidence": "established",
+          "citations": [
+            {
+              "pmid": "21740426",
+              "title": "Antimicrobial activity of alpha-pinene",
+              "journal": "Molecules",
+              "year": 2011
+            }
+          ]
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Shortness of breath", "relevance": "high"},
+        {"symptom": "Wheezing", "relevance": "high"},
+        {"symptom": "Short-term memory loss", "relevance": "moderate"},
+        {"symptom": "THC-induced memory impairment", "relevance": "high"},
+        {"symptom": "Mental fatigue", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "May irritate mucous membranes at high concentrations",
+        "Potential allergen for sensitive individuals"
+      ],
+      "synergies": [
+        {"with": "THC", "effect": "Counteracts memory impairment"},
+        {"with": "Limonene", "effect": "Alertness and focus"}
+      ]
+    },
+    {
+      "terpeneId": "terpene:humulene",
+      "name": "Humulene",
+      "conditions": [
+        {
+          "condition": "Obesity",
+          "icdCode": "E66.9",
+          "mechanism": "Appetite suppressant",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "citations": [
+            {
+              "pmid": "27824787",
+              "title": "Alpha-humulene reduces food intake",
+              "journal": "Planta Medica",
+              "year": 2016
+            }
+          ]
+        },
+        {
+          "condition": "Allergies",
+          "icdCode": "T78.4",
+          "mechanism": "Antihistamine properties",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "citations": []
+        },
+        {
+          "condition": "Inflammation",
+          "icdCode": "R09.89",
+          "mechanism": "COX-2 inhibition",
+          "strength": "strong",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "17983758",
+              "title": "Anti-inflammatory effects of α-humulene",
+              "journal": "European Journal of Pharmacology",
+              "year": 2007
+            }
+          ]
+        },
+        {
+          "condition": "Cancer (Adjunctive)",
+          "icdCode": "C80.1",
+          "mechanism": "Anti-tumor activity observed in vitro",
+          "strength": "weak",
+          "evidence": "preliminary",
+          "citations": [
+            {
+              "pmid": "12809145",
+              "title": "Humulene as anti-tumor agent",
+              "journal": "Planta Medica",
+              "year": 2003
+            }
+          ]
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Excessive appetite", "relevance": "high"},
+        {"symptom": "Chronic inflammation", "relevance": "high"},
+        {"symptom": "Allergic reactions", "relevance": "moderate"},
+        {"symptom": "Swelling", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "Generally well-tolerated",
+        "No significant contraindications known"
+      ],
+      "synergies": [
+        {"with": "Beta-Caryophyllene", "effect": "Potent anti-inflammatory"},
+        {"with": "THCV", "effect": "Appetite suppression"}
+      ]
+    },
+    {
+      "terpeneId": "terpene:terpinolene",
+      "name": "Terpinolene",
+      "conditions": [
+        {
+          "condition": "Insomnia",
+          "icdCode": "G47.0",
+          "mechanism": "CNS depressant, sedative",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "citations": [
+            {
+              "pmid": "23438223",
+              "title": "Sedative effects of terpinolene",
+              "journal": "Natural Product Communications",
+              "year": 2013
+            }
+          ]
+        },
+        {
+          "condition": "Cardiovascular Disease",
+          "icdCode": "I25.9",
+          "mechanism": "Antioxidant, reduces LDL oxidation",
+          "strength": "weak",
+          "evidence": "preliminary",
+          "citations": []
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Difficulty sleeping", "relevance": "high"},
+        {"symptom": "Restlessness", "relevance": "moderate"},
+        {"symptom": "Oxidative stress", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "May enhance sedative effects of other substances"
+      ],
+      "synergies": [
+        {"with": "Myrcene", "effect": "Enhanced sedation"},
+        {"with": "Linalool", "effect": "Calming effects"}
+      ]
+    },
+    {
+      "terpeneId": "terpene:beta-pinene",
+      "name": "Beta-Pinene",
+      "conditions": [
+        {
+          "condition": "Respiratory Infections",
+          "icdCode": "J06.9",
+          "mechanism": "Expectorant and antimicrobial",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "citations": []
+        },
+        {
+          "condition": "Depression",
+          "icdCode": "F32.9",
+          "mechanism": "Uplifting, mood elevation",
+          "strength": "weak",
+          "evidence": "anecdotal",
+          "citations": []
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Congestion", "relevance": "high"},
+        {"symptom": "Cough with phlegm", "relevance": "moderate"},
+        {"symptom": "Low energy", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "Similar to Alpha-Pinene",
+        "Potential respiratory irritant at high concentrations"
+      ],
+      "synergies": [
+        {"with": "Alpha-Pinene", "effect": "Enhanced respiratory benefits"},
+        {"with": "Eucalyptol", "effect": "Decongestant"}
+      ]
+    },
+    {
+      "terpeneId": "terpene:ocimene",
+      "name": "Ocimene",
+      "conditions": [
+        {
+          "condition": "Viral Infections",
+          "icdCode": "B34.9",
+          "mechanism": "Antiviral properties",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "citations": [
+            {
+              "pmid": "29215293",
+              "title": "Antiviral activity of ocimene",
+              "journal": "Antiviral Research",
+              "year": 2017
+            }
+          ]
+        },
+        {
+          "condition": "Diabetes",
+          "icdCode": "E11.9",
+          "mechanism": "Inhibits enzymes related to diabetes",
+          "strength": "weak",
+          "evidence": "preliminary",
+          "citations": []
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Viral symptoms", "relevance": "moderate"},
+        {"symptom": "Congestion", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "Limited research on safety profile"
+      ],
+      "synergies": [
+        {"with": "Limonene", "effect": "Uplifting and antiviral"}
+      ]
+    },
+    {
+      "terpeneId": "terpene:bisabolol",
+      "name": "Bisabolol",
+      "conditions": [
+        {
+          "condition": "Skin Conditions",
+          "icdCode": "L30.9",
+          "mechanism": "Anti-inflammatory, promotes healing",
+          "strength": "strong",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "20952159",
+              "title": "Wound healing effects of alpha-bisabolol",
+              "journal": "Journal of Investigative Dermatology",
+              "year": 2010
+            }
+          ]
+        },
+        {
+          "condition": "Gastrointestinal Disorders",
+          "icdCode": "K30",
+          "mechanism": "Gastroprotective, reduces ulcer formation",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "citations": [
+            {
+              "pmid": "2276894",
+              "title": "Gastroprotective effect of bisabolol",
+              "journal": "Arzneimittelforschung",
+              "year": 1990
+            }
+          ]
+        },
+        {
+          "condition": "Bacterial Infections",
+          "icdCode": "A49.9",
+          "mechanism": "Broad-spectrum antibacterial",
+          "strength": "moderate",
+          "evidence": "established",
+          "citations": []
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Skin irritation", "relevance": "high"},
+        {"symptom": "Redness and rash", "relevance": "high"},
+        {"symptom": "Stomach upset", "relevance": "moderate"},
+        {"symptom": "Wound healing", "relevance": "high"}
+      ],
+      "contraindications": [
+        "Generally very well tolerated",
+        "Used in infant care products (chamomile)"
+      ],
+      "synergies": [
+        {"with": "Linalool", "effect": "Enhanced skin healing"},
+        {"with": "CBD", "effect": "Anti-inflammatory for skin"}
+      ]
+    }
+  ]
+}

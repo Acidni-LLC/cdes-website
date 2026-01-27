@@ -1,0 +1,665 @@
+﻿{
+  "$schema": "https://cdes.acidni.net/schemas/cannabinoid-therapeutics.json",
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-27",
+  "disclaimer": "This data is for informational purposes only and is not medical advice. Consult a healthcare provider before using cannabis for medical purposes.",
+  "evidenceLevels": {
+    "anecdotal": "Based on user reports and traditional use",
+    "preliminary": "Early-stage research, animal studies, or in-vitro studies",
+    "clinical": "Human clinical trials with published results",
+    "established": "FDA-approved or multiple systematic reviews"
+  },
+  "therapeutics": [
+    {
+      "cannabinoidId": "cannabinoid:thc",
+      "name": "THC",
+      "fullName": "Delta-9-Tetrahydrocannabinol",
+      "schedule": "Schedule I (federally), varies by state",
+      "conditions": [
+        {
+          "condition": "Chemotherapy-Induced Nausea",
+          "icdCode": "R11.0",
+          "mechanism": "CB1 receptor activation in brainstem",
+          "strength": "strong",
+          "evidence": "established",
+          "fdaApproved": true,
+          "citations": [
+            {
+              "pmid": "18025276",
+              "title": "Cannabinoids for control of chemotherapy induced nausea",
+              "journal": "Cochrane Database of Systematic Reviews",
+              "year": 2007
+            }
+          ]
+        },
+        {
+          "condition": "HIV/AIDS Wasting Syndrome",
+          "icdCode": "B22.2",
+          "mechanism": "Appetite stimulation via CB1",
+          "strength": "strong",
+          "evidence": "established",
+          "fdaApproved": true,
+          "citations": [
+            {
+              "pmid": "7655456",
+              "title": "Dronabinol for AIDS-related anorexia",
+              "journal": "Annals of Internal Medicine",
+              "year": 1995
+            }
+          ]
+        },
+        {
+          "condition": "Chronic Pain",
+          "icdCode": "G89.29",
+          "mechanism": "Modulation of pain pathways via CB1/CB2",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "25635955",
+              "title": "Cannabinoids for chronic non-cancer pain",
+              "journal": "BMJ",
+              "year": 2015
+            }
+          ]
+        },
+        {
+          "condition": "Multiple Sclerosis Spasticity",
+          "icdCode": "G35",
+          "mechanism": "Muscle relaxation via CB1",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "22791906",
+              "title": "Nabiximols for MS spasticity",
+              "journal": "European Journal of Neurology",
+              "year": 2012
+            }
+          ]
+        },
+        {
+          "condition": "Glaucoma",
+          "icdCode": "H40.9",
+          "mechanism": "Reduces intraocular pressure",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "fdaApproved": false,
+          "citations": []
+        },
+        {
+          "condition": "PTSD",
+          "icdCode": "F43.1",
+          "mechanism": "Modulates fear memory consolidation",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "24830188",
+              "title": "Cannabis for PTSD symptoms",
+              "journal": "Journal of Psychoactive Drugs",
+              "year": 2014
+            }
+          ]
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Nausea", "relevance": "high"},
+        {"symptom": "Vomiting", "relevance": "high"},
+        {"symptom": "Loss of appetite", "relevance": "high"},
+        {"symptom": "Chronic pain", "relevance": "high"},
+        {"symptom": "Muscle spasms", "relevance": "moderate"},
+        {"symptom": "Nightmares (PTSD)", "relevance": "moderate"},
+        {"symptom": "Insomnia", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "History of psychosis or schizophrenia",
+        "Pregnancy and breastfeeding",
+        "Cardiovascular disease (tachycardia risk)",
+        "Adolescents under 25 (brain development)",
+        "History of substance use disorder"
+      ],
+      "sideEffects": [
+        "Impaired memory and cognition",
+        "Anxiety or paranoia (dose-dependent)",
+        "Dry mouth",
+        "Increased heart rate",
+        "Coordination impairment"
+      ]
+    },
+    {
+      "cannabinoidId": "cannabinoid:cbd",
+      "name": "CBD",
+      "fullName": "Cannabidiol",
+      "schedule": "Schedule V (Epidiolex), otherwise unscheduled (<0.3% THC)",
+      "conditions": [
+        {
+          "condition": "Epilepsy (Dravet/Lennox-Gastaut)",
+          "icdCode": "G40.4",
+          "mechanism": "Modulates sodium channels, reduces neuronal excitability",
+          "strength": "strong",
+          "evidence": "established",
+          "fdaApproved": true,
+          "citations": [
+            {
+              "pmid": "28538134",
+              "title": "Trial of Cannabidiol for Drug-Resistant Seizures in Dravet Syndrome",
+              "journal": "New England Journal of Medicine",
+              "year": 2017
+            }
+          ]
+        },
+        {
+          "condition": "Anxiety Disorders",
+          "icdCode": "F41.9",
+          "mechanism": "5-HT1A agonism, ECS modulation",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "30624194",
+              "title": "Cannabidiol in Anxiety and Sleep",
+              "journal": "The Permanente Journal",
+              "year": 2019
+            }
+          ]
+        },
+        {
+          "condition": "Chronic Pain",
+          "icdCode": "G89.29",
+          "mechanism": "Anti-inflammatory, TRPV1 modulation",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "fdaApproved": false,
+          "citations": []
+        },
+        {
+          "condition": "Insomnia",
+          "icdCode": "G47.0",
+          "mechanism": "Anxiolytic effects improve sleep onset",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "30624194",
+              "title": "Cannabidiol in Anxiety and Sleep",
+              "journal": "The Permanente Journal",
+              "year": 2019
+            }
+          ]
+        },
+        {
+          "condition": "Inflammatory Conditions",
+          "icdCode": "R09.89",
+          "mechanism": "Inhibits cytokine production",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": []
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Seizures", "relevance": "high"},
+        {"symptom": "Anxiety", "relevance": "high"},
+        {"symptom": "Sleep difficulties", "relevance": "high"},
+        {"symptom": "Chronic pain", "relevance": "moderate"},
+        {"symptom": "Inflammation", "relevance": "moderate"},
+        {"symptom": "Stress", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "Liver disease (requires monitoring)",
+        "Drug interactions (CYP450 inhibitor)",
+        "Pregnancy (insufficient data)"
+      ],
+      "sideEffects": [
+        "Fatigue",
+        "Diarrhea",
+        "Changes in appetite",
+        "Elevated liver enzymes (high doses)"
+      ]
+    },
+    {
+      "cannabinoidId": "cannabinoid:cbg",
+      "name": "CBG",
+      "fullName": "Cannabigerol",
+      "schedule": "Unscheduled",
+      "conditions": [
+        {
+          "condition": "Inflammatory Bowel Disease",
+          "icdCode": "K51.9",
+          "mechanism": "Reduces intestinal inflammation",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "23415610",
+              "title": "Beneficial effect of CBG on experimental IBD",
+              "journal": "Biochemical Pharmacology",
+              "year": 2013
+            }
+          ]
+        },
+        {
+          "condition": "Glaucoma",
+          "icdCode": "H40.9",
+          "mechanism": "Reduces intraocular pressure",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": []
+        },
+        {
+          "condition": "Huntington's Disease",
+          "icdCode": "G10",
+          "mechanism": "Neuroprotective",
+          "strength": "weak",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "25252936",
+              "title": "CBG neuroprotective effects",
+              "journal": "Neurotherapeutics",
+              "year": 2015
+            }
+          ]
+        },
+        {
+          "condition": "Bacterial Infections (MRSA)",
+          "icdCode": "A49.02",
+          "mechanism": "Disrupts bacterial membranes",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "18681481",
+              "title": "Antibacterial cannabinoids from Cannabis sativa",
+              "journal": "Journal of Natural Products",
+              "year": 2008
+            }
+          ]
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Digestive inflammation", "relevance": "high"},
+        {"symptom": "Eye pressure", "relevance": "moderate"},
+        {"symptom": "Bacterial infection", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "Limited safety data available",
+        "Potential drug interactions"
+      ],
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Dry mouth",
+        "Drowsiness at high doses"
+      ]
+    },
+    {
+      "cannabinoidId": "cannabinoid:cbn",
+      "name": "CBN",
+      "fullName": "Cannabinol",
+      "schedule": "Unscheduled",
+      "conditions": [
+        {
+          "condition": "Insomnia",
+          "icdCode": "G47.0",
+          "mechanism": "Mild sedative (THC degradation product)",
+          "strength": "moderate",
+          "evidence": "anecdotal",
+          "fdaApproved": false,
+          "citations": []
+        },
+        {
+          "condition": "Pain",
+          "icdCode": "G89.29",
+          "mechanism": "Weak CB1/CB2 agonist",
+          "strength": "weak",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": []
+        },
+        {
+          "condition": "ALS (Amyotrophic Lateral Sclerosis)",
+          "icdCode": "G12.21",
+          "mechanism": "Delays disease onset in models",
+          "strength": "weak",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "16183560",
+              "title": "CBN delays ALS in SOD1 mice",
+              "journal": "Journal of Neurochemistry",
+              "year": 2005
+            }
+          ]
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Difficulty sleeping", "relevance": "high"},
+        {"symptom": "Restlessness", "relevance": "moderate"},
+        {"symptom": "Mild pain", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "May enhance sedative medications",
+        "Limited research on long-term use"
+      ],
+      "sideEffects": [
+        "Drowsiness",
+        "Mild sedation"
+      ]
+    },
+    {
+      "cannabinoidId": "cannabinoid:cbc",
+      "name": "CBC",
+      "fullName": "Cannabichromene",
+      "schedule": "Unscheduled",
+      "conditions": [
+        {
+          "condition": "Depression",
+          "icdCode": "F32.9",
+          "mechanism": "Enhances anandamide availability",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "20332000",
+              "title": "Antidepressant-like effect of CBC",
+              "journal": "Pharmacology Biochemistry and Behavior",
+              "year": 2010
+            }
+          ]
+        },
+        {
+          "condition": "Acne",
+          "icdCode": "L70.0",
+          "mechanism": "Inhibits sebum production",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "27094344",
+              "title": "Cannabinoids for sebaceous gland conditions",
+              "journal": "Experimental Dermatology",
+              "year": 2016
+            }
+          ]
+        },
+        {
+          "condition": "Pain",
+          "icdCode": "G89.29",
+          "mechanism": "TRPV1 and TRPA1 activation",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": []
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Low mood", "relevance": "moderate"},
+        {"symptom": "Skin inflammation", "relevance": "moderate"},
+        {"symptom": "Pain", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "Very limited human research",
+        "Potential drug interactions unknown"
+      ],
+      "sideEffects": [
+        "Generally well-tolerated in animal studies"
+      ]
+    },
+    {
+      "cannabinoidId": "cannabinoid:thcv",
+      "name": "THCV",
+      "fullName": "Tetrahydrocannabivarin",
+      "schedule": "Varies by jurisdiction",
+      "conditions": [
+        {
+          "condition": "Obesity/Metabolic Syndrome",
+          "icdCode": "E66.9",
+          "mechanism": "CB1 antagonist at low doses, appetite suppressant",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "23359152",
+              "title": "THCV for obesity and diabetes",
+              "journal": "Nutrition & Diabetes",
+              "year": 2013
+            }
+          ]
+        },
+        {
+          "condition": "Type 2 Diabetes",
+          "icdCode": "E11.9",
+          "mechanism": "Improves glycemic control",
+          "strength": "moderate",
+          "evidence": "clinical",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "27573936",
+              "title": "THCV and CBD in Type 2 Diabetes",
+              "journal": "Diabetes Care",
+              "year": 2016
+            }
+          ]
+        },
+        {
+          "condition": "Parkinson's Disease",
+          "icdCode": "G20",
+          "mechanism": "CB2 agonist, neuroprotective",
+          "strength": "weak",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "21323909",
+              "title": "THCV antioxidant properties in Parkinson's",
+              "journal": "British Journal of Pharmacology",
+              "year": 2011
+            }
+          ]
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Excessive appetite", "relevance": "high"},
+        {"symptom": "Blood sugar instability", "relevance": "high"},
+        {"symptom": "Tremors", "relevance": "moderate"},
+        {"symptom": "Fatigue", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "May be intoxicating at high doses",
+        "Limited long-term safety data"
+      ],
+      "sideEffects": [
+        "Shorter-duration psychoactivity than THC",
+        "Generally well-tolerated"
+      ]
+    },
+    {
+      "cannabinoidId": "cannabinoid:cbda",
+      "name": "CBDA",
+      "fullName": "Cannabidiolic Acid",
+      "schedule": "Unscheduled",
+      "conditions": [
+        {
+          "condition": "Nausea and Vomiting",
+          "icdCode": "R11.2",
+          "mechanism": "5-HT1A agonist (more potent than CBD)",
+          "strength": "strong",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "23890879",
+              "title": "CBDA suppresses nausea and vomiting",
+              "journal": "British Journal of Pharmacology",
+              "year": 2013
+            }
+          ]
+        },
+        {
+          "condition": "Inflammation",
+          "icdCode": "R09.89",
+          "mechanism": "COX-2 selective inhibition",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "18556441",
+              "title": "CBDA as selective COX-2 inhibitor",
+              "journal": "Drug Metabolism and Disposition",
+              "year": 2008
+            }
+          ]
+        },
+        {
+          "condition": "Anxiety",
+          "icdCode": "F41.9",
+          "mechanism": "Enhanced 5-HT1A affinity vs CBD",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": []
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Nausea", "relevance": "high"},
+        {"symptom": "Vomiting", "relevance": "high"},
+        {"symptom": "Anticipatory nausea", "relevance": "high"},
+        {"symptom": "Inflammation", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "Heat-sensitive (decarboxylates to CBD)",
+        "Limited human research"
+      ],
+      "sideEffects": [
+        "Similar to CBD profile",
+        "Generally well-tolerated"
+      ]
+    },
+    {
+      "cannabinoidId": "cannabinoid:thca",
+      "name": "THCA",
+      "fullName": "Tetrahydrocannabinolic Acid",
+      "schedule": "Varies by jurisdiction (non-psychoactive)",
+      "conditions": [
+        {
+          "condition": "Nausea",
+          "icdCode": "R11.0",
+          "mechanism": "Antiemetic via 5-HT receptors",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "23889354",
+              "title": "THCA antiemetic effects",
+              "journal": "British Journal of Pharmacology",
+              "year": 2013
+            }
+          ]
+        },
+        {
+          "condition": "Neurodegenerative Diseases",
+          "icdCode": "G31.9",
+          "mechanism": "Neuroprotective, PPARγ activation",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "28853159",
+              "title": "THCA in Huntington's and Parkinson's models",
+              "journal": "British Journal of Pharmacology",
+              "year": 2017
+            }
+          ]
+        },
+        {
+          "condition": "Inflammation",
+          "icdCode": "R09.89",
+          "mechanism": "COX-1 and COX-2 inhibition",
+          "strength": "moderate",
+          "evidence": "preliminary",
+          "fdaApproved": false,
+          "citations": []
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Nausea", "relevance": "high"},
+        {"symptom": "Inflammation", "relevance": "moderate"},
+        {"symptom": "Muscle spasms", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "Heat converts to THC (becomes psychoactive)",
+        "Raw cannabis only"
+      ],
+      "sideEffects": [
+        "Non-psychoactive in raw form",
+        "Generally well-tolerated"
+      ]
+    },
+    {
+      "cannabinoidId": "cannabinoid:delta8thc",
+      "name": "Delta-8-THC",
+      "fullName": "Delta-8-Tetrahydrocannabinol",
+      "schedule": "Federally unclear, state-dependent",
+      "conditions": [
+        {
+          "condition": "Nausea (Pediatric Cancer)",
+          "icdCode": "R11.0",
+          "mechanism": "CB1 agonist, antiemetic",
+          "strength": "strong",
+          "evidence": "clinical",
+          "fdaApproved": false,
+          "citations": [
+            {
+              "pmid": "7776837",
+              "title": "Delta-8-THC for pediatric chemotherapy nausea",
+              "journal": "Life Sciences",
+              "year": 1995
+            }
+          ]
+        },
+        {
+          "condition": "Anxiety",
+          "icdCode": "F41.9",
+          "mechanism": "Lower anxiety profile than D9-THC",
+          "strength": "moderate",
+          "evidence": "anecdotal",
+          "fdaApproved": false,
+          "citations": []
+        }
+      ],
+      "symptoms": [
+        {"symptom": "Nausea", "relevance": "high"},
+        {"symptom": "Vomiting", "relevance": "high"},
+        {"symptom": "Mild anxiety", "relevance": "moderate"}
+      ],
+      "contraindications": [
+        "Similar to Delta-9-THC",
+        "Quality concerns with synthesized products",
+        "May still cause impairment"
+      ],
+      "sideEffects": [
+        "Similar to D9-THC but milder",
+        "Cognitive impairment",
+        "Dry mouth"
+      ]
+    }
+  ]
+}

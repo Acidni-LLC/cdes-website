@@ -1,0 +1,139 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+import cannabinoidData from '../data/cannabinoid-library.json';
+
+const cannabinoids = cannabinoidData.cannabinoids;
+---
+
+<Layout title="Cannabinoid Library" description="Official CDES cannabinoid reference with CAS numbers, FDA status, and effects">
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">CDES Cannabinoid Library</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Official reference list of cannabis cannabinoids with standardized identifiers,
+        CAS numbers, FDA approval status, and documented effects.
+      </p>
+      <p class="mt-4 text-sm text-gray-500">
+        Version {cannabinoidData.version}  Last updated: {cannabinoidData.lastUpdated} 
+        <a href="https://github.com/Acidni-LLC/cdes-reference-data" class="text-cdes-green-600 hover:underline">CC0 Public Domain</a>
+      </p>
+    </div>
+
+    <!-- Cannabinoid Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {cannabinoids.map((cannabinoid: any) => (
+        <div class="bg-white border rounded-lg overflow-hidden hover:shadow-lg transition">
+          <div class="px-4 py-3 flex items-center justify-between" style={`background-color: ${cannabinoid.color}`}>
+            <div>
+              <h2 class="text-lg font-semibold text-gray-800">{cannabinoid.name}</h2>
+              <code class="text-xs text-gray-600">{cannabinoid.id}</code>
+            </div>
+            <div class="text-right">
+              <span class={`text-xs px-2 py-1 rounded ${
+                cannabinoid.fdaApproved ? 'bg-green-200 text-green-800' : 'bg-gray-200 text-gray-600'
+              }`}>
+                {cannabinoid.fdaApproved ? 'FDA Approved' : 'Not FDA Approved'}
+              </span>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="text-sm text-gray-600 mb-3">{cannabinoid.fullName}</div>
+            
+            <div class="grid grid-cols-2 gap-2 text-sm mb-4">
+              <div>
+                <span class="text-gray-500">CAS:</span>
+                <span class="font-mono ml-1">{cannabinoid.casNumber}</span>
+              </div>
+              <div>
+                <span class="text-gray-500">PubChem:</span>
+                <a
+                  href={`https://pubchem.ncbi.nlm.nih.gov/compound/${cannabinoid.pubchemId}`}
+                  target="_blank"
+                  class="text-cdes-green-600 hover:underline ml-1"
+                >
+                  {cannabinoid.pubchemId}
+                </a>
+              </div>
+              <div>
+                <span class="text-gray-500">Formula:</span>
+                <span class="font-mono ml-1">{cannabinoid.molecularFormula}</span>
+              </div>
+              <div>
+                <span class="text-gray-500">Schedule:</span>
+                <span class={`ml-1 ${
+                  cannabinoid.schedule === 'Schedule I' ? 'text-red-600 font-medium' :
+                  cannabinoid.schedule === 'Unscheduled' ? 'text-green-600' : 'text-gray-600'
+                }`}>{cannabinoid.schedule || 'Varies'}</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-gray-500 text-sm">Category:</span>
+              <span class={`ml-2 text-xs px-2 py-0.5 rounded ${
+                cannabinoid.psychoactive ? 'bg-purple-100 text-purple-800' : 'bg-blue-100 text-blue-800'
+              }`}>
+                {cannabinoid.psychoactive ? 'Psychoactive' : 'Non-Psychoactive'}
+              </span>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-gray-500 text-sm">Effects:</span>
+              <div class="flex flex-wrap gap-1 mt-1">
+                {cannabinoid.effects?.slice(0, 4).map((e: any) => (
+                  <span class={`text-xs px-2 py-0.5 rounded ${
+                    e.strength === 'strong' ? 'bg-cdes-green-100 text-cdes-green-800' :
+                    e.strength === 'moderate' ? 'bg-blue-100 text-blue-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {e.effect}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {cannabinoid.notes && (
+              <p class="text-sm text-gray-600 mt-3 italic">{cannabinoid.notes}</p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Color Legend -->
+    <div class="mt-12 bg-gray-50 rounded-lg p-6">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Standard Colors</h2>
+      <p class="text-gray-600 mb-4">Use these colors in your applications for consistent cannabinoid visualization.</p>
+      <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
+        {cannabinoids.map((c: any) => (
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-lg mx-auto mb-2 border border-gray-200" style={`background-color: ${c.color}`}></div>
+            <div class="text-xs font-medium">{c.name}</div>
+            <div class="text-xs text-gray-500 font-mono">{c.color}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Download Section -->
+    <div class="mt-16 text-center bg-gray-50 rounded-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Download the Full Dataset</h2>
+      <p class="text-gray-600 mb-6">
+        Access the complete cannabinoid library in JSON format for your applications.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a
+          href="https://raw.githubusercontent.com/Acidni-LLC/cdes-reference-data/main/cannabinoids/cannabinoid-library.json"
+          class="px-6 py-3 bg-cdes-green-600 text-white rounded-lg hover:bg-cdes-green-700 transition"
+        >
+          Download JSON
+        </a>
+        <a
+          href="https://github.com/Acidni-LLC/cdes-reference-data"
+          class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition"
+        >
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

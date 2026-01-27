@@ -1,0 +1,195 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CDES Terpene Color Reference",
+  "description": "Official color mappings for cannabis terpenes - used by all CDES SDKs and visualizations",
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-25",
+  "license": "CC0-1.0",
+  "colorPalette": {
+    "description": "Scientifically-informed color palette based on natural associations",
+    "accessibility": "WCAG 2.1 AA compliant for text on white backgrounds",
+    "usage": "Use hex for CSS/web, rgb for programmatic manipulation"
+  },
+  "terpenes": [
+    {
+      "id": "terpene:myrcene",
+      "name": "Myrcene",
+      "color": { "hex": "#8B4513", "rgb": { "r": 139, "g": 69, "b": 19 } },
+      "colorRationale": "Earthy brown - dominant terpene, grounding effect"
+    },
+    {
+      "id": "terpene:limonene",
+      "name": "Limonene",
+      "color": { "hex": "#FFD700", "rgb": { "r": 255, "g": 215, "b": 0 } },
+      "colorRationale": "Citrus gold - bright, uplifting like citrus fruits"
+    },
+    {
+      "id": "terpene:caryophyllene",
+      "name": "Beta-Caryophyllene",
+      "color": { "hex": "#654321", "rgb": { "r": 101, "g": 67, "b": 33 } },
+      "colorRationale": "Dark brown/spice - peppery, woody character"
+    },
+    {
+      "id": "terpene:pinene",
+      "name": "Alpha-Pinene",
+      "color": { "hex": "#228B22", "rgb": { "r": 34, "g": 139, "b": 34 } },
+      "colorRationale": "Forest green - pine forest association"
+    },
+    {
+      "id": "terpene:linalool",
+      "name": "Linalool",
+      "color": { "hex": "#E6E6FA", "rgb": { "r": 230, "g": 230, "b": 250 } },
+      "colorRationale": "Lavender - floral, calming association"
+    },
+    {
+      "id": "terpene:humulene",
+      "name": "Humulene",
+      "color": { "hex": "#DAA520", "rgb": { "r": 218, "g": 165, "b": 32 } },
+      "colorRationale": "Goldenrod/hop - found in hops"
+    },
+    {
+      "id": "terpene:terpinolene",
+      "name": "Terpinolene",
+      "color": { "hex": "#FF69B4", "rgb": { "r": 255, "g": 105, "b": 180 } },
+      "colorRationale": "Hot pink - complex floral-herbal-citrus profile"
+    },
+    {
+      "id": "terpene:ocimene",
+      "name": "Ocimene",
+      "color": { "hex": "#98FB98", "rgb": { "r": 152, "g": 251, "b": 152 } },
+      "colorRationale": "Pale green - sweet herbal, fresh"
+    },
+    {
+      "id": "terpene:bisabolol",
+      "name": "Alpha-Bisabolol",
+      "color": { "hex": "#F0E68C", "rgb": { "r": 240, "g": 230, "b": 140 } },
+      "colorRationale": "Khaki/chamomile - chamomile association"
+    },
+    {
+      "id": "terpene:camphene",
+      "name": "Camphene",
+      "color": { "hex": "#708090", "rgb": { "r": 112, "g": 128, "b": 144 } },
+      "colorRationale": "Slate gray - camphor, medicinal"
+    },
+    {
+      "id": "terpene:carene",
+      "name": "Delta-3-Carene",
+      "color": { "hex": "#CD853F", "rgb": { "r": 205, "g": 133, "b": 63 } },
+      "colorRationale": "Peru/cedar - sweet pine-cedar"
+    },
+    {
+      "id": "terpene:caryophyllene-oxide",
+      "name": "Caryophyllene Oxide",
+      "color": { "hex": "#A0522D", "rgb": { "r": 160, "g": 82, "b": 45 } },
+      "colorRationale": "Sienna - oxidized variant of caryophyllene"
+    },
+    {
+      "id": "terpene:eucalyptol",
+      "name": "Eucalyptol",
+      "color": { "hex": "#00CED1", "rgb": { "r": 0, "g": 206, "b": 209 } },
+      "colorRationale": "Dark turquoise - cooling, menthol-like"
+    },
+    {
+      "id": "terpene:fenchol",
+      "name": "Fenchol",
+      "color": { "hex": "#2E8B57", "rgb": { "r": 46, "g": 139, "b": 87 } },
+      "colorRationale": "Sea green - basil/fennel association"
+    },
+    {
+      "id": "terpene:geraniol",
+      "name": "Geraniol",
+      "color": { "hex": "#FFB6C1", "rgb": { "r": 255, "g": 182, "b": 193 } },
+      "colorRationale": "Light pink - rose/geranium floral"
+    },
+    {
+      "id": "terpene:guaiol",
+      "name": "Guaiol",
+      "color": { "hex": "#4682B4", "rgb": { "r": 70, "g": 130, "b": 180 } },
+      "colorRationale": "Steel blue - woody/rose contrast"
+    },
+    {
+      "id": "terpene:isopulegol",
+      "name": "Isopulegol",
+      "color": { "hex": "#48D1CC", "rgb": { "r": 72, "g": 209, "b": 204 } },
+      "colorRationale": "Medium turquoise - minty, menthol precursor"
+    },
+    {
+      "id": "terpene:nerolidol",
+      "name": "Nerolidol",
+      "color": { "hex": "#DDA0DD", "rgb": { "r": 221, "g": 160, "b": 221 } },
+      "colorRationale": "Plum - floral/woody/citrus blend"
+    },
+    {
+      "id": "terpene:terpineol",
+      "name": "Alpha-Terpineol",
+      "color": { "hex": "#D8BFD8", "rgb": { "r": 216, "g": 191, "b": 216 } },
+      "colorRationale": "Thistle - lilac floral"
+    },
+    {
+      "id": "terpene:valencene",
+      "name": "Valencene",
+      "color": { "hex": "#FFA500", "rgb": { "r": 255, "g": 165, "b": 0 } },
+      "colorRationale": "Orange - Valencia orange namesake"
+    },
+    {
+      "id": "terpene:borneol",
+      "name": "Borneol",
+      "color": { "hex": "#B0C4DE", "rgb": { "r": 176, "g": 196, "b": 222 } },
+      "colorRationale": "Light steel blue - camphor/mint, traditional medicine"
+    },
+    {
+      "id": "terpene:sabinene",
+      "name": "Sabinene",
+      "color": { "hex": "#2F4F4F", "rgb": { "r": 47, "g": 79, "b": 79 } },
+      "colorRationale": "Dark slate gray - black pepper spice"
+    },
+    {
+      "id": "terpene:phytol",
+      "name": "Phytol",
+      "color": { "hex": "#90EE90", "rgb": { "r": 144, "g": 238, "b": 144 } },
+      "colorRationale": "Light green - chlorophyll derivative"
+    },
+    {
+      "id": "terpene:beta-pinene",
+      "name": "Beta-Pinene",
+      "color": { "hex": "#006400", "rgb": { "r": 0, "g": 100, "b": 0 } },
+      "colorRationale": "Dark green - deeper pine variant"
+    },
+    {
+      "id": "terpene:trans-nerolidol",
+      "name": "Trans-Nerolidol",
+      "color": { "hex": "#BA55D3", "rgb": { "r": 186, "g": 85, "b": 211 } },
+      "colorRationale": "Medium orchid - floral variant"
+    },
+    {
+      "id": "terpene:cis-nerolidol",
+      "name": "Cis-Nerolidol",
+      "color": { "hex": "#9370DB", "rgb": { "r": 147, "g": 112, "b": 219 } },
+      "colorRationale": "Medium purple - cis isomer variant"
+    },
+    {
+      "id": "terpene:gamma-terpinene",
+      "name": "Gamma-Terpinene",
+      "color": { "hex": "#66CDAA", "rgb": { "r": 102, "g": 205, "b": 170 } },
+      "colorRationale": "Medium aquamarine - citrus/herbal"
+    },
+    {
+      "id": "terpene:alpha-terpinene",
+      "name": "Alpha-Terpinene",
+      "color": { "hex": "#20B2AA", "rgb": { "r": 32, "g": 178, "b": 170 } },
+      "colorRationale": "Light sea green - woody/lemon"
+    },
+    {
+      "id": "terpene:phellandrene",
+      "name": "Alpha-Phellandrene",
+      "color": { "hex": "#3CB371", "rgb": { "r": 60, "g": 179, "b": 113 } },
+      "colorRationale": "Medium sea green - minty/citrus/wood"
+    },
+    {
+      "id": "terpene:farnesene",
+      "name": "Farnesene",
+      "color": { "hex": "#9ACD32", "rgb": { "r": 154, "g": 205, "b": 50 } },
+      "colorRationale": "Yellow green - green apple association"
+    }
+  ]
+}
