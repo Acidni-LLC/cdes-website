@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 import terpeneData from '../data/terpene-library.json';
 
@@ -10,11 +10,11 @@ const terpenes = terpeneData.terpenes;
     <div class="text-center mb-12">
       <h1 class="text-4xl font-bold text-gray-900 mb-4">CDES Terpene Library</h1>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Official reference list of cannabis terpenes with standardized identifiers, 
+        Official reference list of cannabis terpenes with standardized identifiers,
         CAS numbers, and documented effects.
       </p>
       <p class="mt-4 text-sm text-gray-500">
-        Version {terpeneData.version}  Last updated: {terpeneData.lastUpdated}  
+        Version {terpeneData.version} - Last updated: {terpeneData.lastUpdated}
         <a href="https://github.com/Acidni-LLC/cdes-reference-data" class="text-cdes-green-600 hover:underline">CC0 Public Domain</a>
       </p>
     </div>
@@ -23,9 +23,12 @@ const terpenes = terpeneData.terpenes;
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {terpenes.map((terpene: any) => (
         <div class="bg-white border rounded-lg overflow-hidden hover:shadow-lg transition">
-          <div class="bg-cdes-green-600 text-white px-4 py-3">
-            <h2 class="text-lg font-semibold">{terpene.name}</h2>
-            <code class="text-xs text-cdes-green-200">{terpene.id}</code>
+          <div class="px-4 py-3 flex items-center justify-between" style={`background-color: ${terpene.color?.hex || '#E8F5E9'}`}>
+            <div>
+              <h2 class="text-lg font-semibold text-gray-800">{terpene.name}</h2>
+              <code class="text-xs text-gray-600">{terpene.id}</code>
+            </div>
+            <span class="text-xs px-2 py-1 rounded bg-white/50 text-gray-700 capitalize">{terpene.category}</span>
           </div>
           <div class="p-4">
             <div class="grid grid-cols-2 gap-2 text-sm mb-4">
@@ -35,7 +38,7 @@ const terpenes = terpeneData.terpenes;
               </div>
               <div>
                 <span class="text-gray-500">PubChem:</span>
-                <a 
+                <a
                   href={`https://pubchem.ncbi.nlm.nih.gov/compound/${terpene.pubchemId}`}
                   target="_blank"
                   class="text-cdes-green-600 hover:underline ml-1"
@@ -48,11 +51,11 @@ const terpenes = terpeneData.terpenes;
                 <span class="font-mono ml-1">{terpene.molecularFormula}</span>
               </div>
               <div>
-                <span class="text-gray-500">Category:</span>
-                <span class="ml-1 capitalize">{terpene.category}</span>
+                <span class="text-gray-500">Boiling:</span>
+                <span class="ml-1">{terpene.boilingPoint?.celsius}C</span>
               </div>
             </div>
-            
+
             <div class="mb-3">
               <span class="text-gray-500 text-sm">Aroma:</span>
               <div class="flex flex-wrap gap-1 mt-1">
@@ -77,18 +80,27 @@ const terpenes = terpeneData.terpenes;
               </div>
             </div>
 
-            {terpene.boilingPoint && (
-              <div class="text-sm text-gray-500">
-                Boiling Point: {terpene.boilingPoint.celsius}C / {terpene.boilingPoint.fahrenheit}F
-              </div>
-            )}
-
             {terpene.notes && (
               <p class="text-sm text-gray-600 mt-3 italic">{terpene.notes}</p>
             )}
           </div>
         </div>
       ))}
+    </div>
+
+    <!-- Color Legend -->
+    <div class="mt-12 bg-gray-50 rounded-lg p-6">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Standard Colors</h2>
+      <p class="text-gray-600 mb-4">Use these colors in your applications for consistent terpene visualization. Available in the <a href="/sdks/cdes" class="text-cdes-green-600 hover:underline">CDES Python SDK</a> and TypeScript SDK.</p>
+      <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-4">
+        {terpenes.map((t: any) => (
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-lg mx-auto mb-2 border border-gray-200" style={`background-color: ${t.color?.hex || '#E8F5E9'}`}></div>
+            <div class="text-xs font-medium">{t.name}</div>
+            <div class="text-xs text-gray-500 font-mono">{t.color?.hex || '#E8F5E9'}</div>
+          </div>
+        ))}
+      </div>
     </div>
 
     <!-- Download Section -->
@@ -104,7 +116,7 @@ const terpenes = terpeneData.terpenes;
         >
           Download JSON
         </a>
-        <a 
+        <a
           href="https://github.com/Acidni-LLC/cdes-reference-data"
           class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition"
         >

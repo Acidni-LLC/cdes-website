@@ -1,4 +1,4 @@
-﻿---
+---
 import Layout from '../layouts/Layout.astro';
 import cannabinoidData from '../data/cannabinoid-library.json';
 
@@ -23,7 +23,7 @@ const cannabinoids = cannabinoidData.cannabinoids;
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {cannabinoids.map((cannabinoid: any) => (
         <div class="bg-white border rounded-lg overflow-hidden hover:shadow-lg transition">
-          <div class="px-4 py-3 flex items-center justify-between" style={`background-color: ${cannabinoid.color}`}>
+          <div class="px-4 py-3 flex items-center justify-between" style={`background-color: ${cannabinoid.color.hex}`}>
             <div>
               <h2 class="text-lg font-semibold text-gray-800">{cannabinoid.name}</h2>
               <code class="text-xs text-gray-600">{cannabinoid.id}</code>
@@ -106,9 +106,9 @@ const cannabinoids = cannabinoidData.cannabinoids;
       <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
         {cannabinoids.map((c: any) => (
           <div class="text-center">
-            <div class="w-12 h-12 rounded-lg mx-auto mb-2 border border-gray-200" style={`background-color: ${c.color}`}></div>
+            <div class="w-12 h-12 rounded-lg mx-auto mb-2 border border-gray-200" style={`background-color: ${c.color.hex}`}></div>
             <div class="text-xs font-medium">{c.name}</div>
-            <div class="text-xs text-gray-500 font-mono">{c.color}</div>
+            <div class="text-xs text-gray-500 font-mono">{c.color.hex}</div>
           </div>
         ))}
       </div>
